@@ -6,33 +6,33 @@ import React from "react";
 const workSteps = [
   {
     number: "01",
-    title: "Consultation",
-    description: "Understanding your requirements.",
+    title: "Understand",
+    description: "We begin by understanding your project requirements, site conditions, building application and operational needs.",
   },
   {
     number: "02",
     title: "Engineering",
-    description: "Design & detailing as per codes and standards.",
+    description: "Our engineering process converts project requirements into practical structural solutions and fabrication drawings.",
   },
   {
     number: "03",
-    title: "Fabrication",
-    description: "Precision fabrication with quality control.",
+    title: "Plan",
+    description: "Project scope, quantities, fabrication requirements and execution schedules are planned before production.",
   },
   {
     number: "04",
-    title: "Logistics",
-    description: "Safe transportation to site.",
+    title: "Fabricate",
+    description: "Structural components are fabricated under controlled manufacturing conditions with quality checks at key stages.",
   },
   {
     number: "05",
-    title: "Erection",
-    description: "Systematic site execution.",
+    title: "Erect",
+    description: "Fabricated structures are transported and systematically erected at the project site.",
   },
   {
     number: "06",
-    title: "Completion",
-    description: "Final inspection & handover.",
+    title: "Inspect & Handover",
+    description: "Final inspections are carried out before project completion and handover.",
   },
 ];
 

@@ -5,32 +5,32 @@ const features = [
   {
     icon: "⚙",
     title: "Engineering-Led Approach",
-    description: "Right solution for every project requirement.",
+    description: "Every project begins with understanding the application, site conditions and structural requirements before developing the right solution.",
   },
   {
     icon: "♙",
     title: "Precision Fabrication",
-    description: "Consistency & dimensional accuracy across components.",
+    description: "Controlled fabrication processes help maintain consistency, dimensional accuracy and structural quality.",
   },
   {
     icon: "✓",
     title: "Project-Focused Execution",
-    description: "Planned, reliable execution for efficient delivery.",
+    description: "We plan fabrication and site activities around project schedules to support efficient execution.",
   },
   {
     icon: "◉",
     title: "Quality Control",
-    description: "Checks across all stages.",
+    description: "Quality checks are incorporated across material handling, fabrication, assembly and erection stages.",
   },
   {
     icon: "⚒",
     title: "Customised Solutions",
-    description: "Designed for individual needs.",
+    description: "We don't believe every industrial project needs the same structure. Our solutions are developed according to individual project requirements.",
   },
   {
     icon: "⌁",
     title: "Single-Point Coordination",
-    description: "Simplifies project execution.",
+    description: "From engineering and fabrication to site erection, our integrated approach simplifies project coordination.",
   },
 ];
 

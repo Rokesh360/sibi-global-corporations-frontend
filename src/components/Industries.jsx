@@ -2,7 +2,7 @@ import React from "react";
 
 const industries = [
   {
-    image: "/assets/img/manufacturing.jpg",  
+   image: "/assets/img/engineering.jpg",
     alt: "Manufacturing",
     icon: "⚙",
     title: <>Manufacturing</>,
@@ -40,7 +40,7 @@ const industries = [
     image: "/assets/img/power-energy.jpg",
     alt: "Power and Energy",
     icon: "⚡",
-    title: <>Power & Energy</>,
+    title: <>Pharmaceutical</>,
     description: <>Structural solutions for power plants & energy</>,
   },
 ];

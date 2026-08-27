@@ -141,7 +141,7 @@ const StatsSection = () => {
         {statsData.map((stat, index) => (
           <React.Fragment key={stat.id}>
             {/* Stat Item */}
-            <div className="stat-box">
+            <div className="stat-box" >
               <div className="stat-icon">{stat.icon}</div>
               <div className="stat-number">
                 {formatNumber(getCount(stat.id))}
