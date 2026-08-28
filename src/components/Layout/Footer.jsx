@@ -105,7 +105,7 @@ export default function Footer() {
        
     </footer>
     <div className="footer_copyrights">
-        <p><a> © 2026 Future Finance Gold Loan.
+        <p><a> © 2026 SIBI Global Corporation.
                 All Rights Reserved.</a></p>
         <p><a href="" target="_blank">
           Designed &amp; Developed by

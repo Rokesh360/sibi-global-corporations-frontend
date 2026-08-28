@@ -109,7 +109,7 @@ const HowWeWork = () => {
               delay: 0.1,
             }}
           >
-            From Concept to Completion
+            From <span className="yellow_text_highlight">Requirement to</span> Completion
           </motion.h2>
 
           <motion.div

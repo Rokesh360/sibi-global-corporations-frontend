@@ -103,7 +103,7 @@ const Solutions = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.div
-            className="section-label"
+            className="section-label-small-text"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

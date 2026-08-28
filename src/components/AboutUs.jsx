@@ -60,7 +60,7 @@ const AboutUs = () => {
 
         {/* LEFT IMAGES */}
         <motion.div
-          className="about-images"
+          className="about-images order_mobile_2"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -122,7 +122,7 @@ const AboutUs = () => {
 
         {/* RIGHT CONTENT */}
         <motion.div
-          className="about-content"
+          className="about-content order_mobile_1"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -170,7 +170,7 @@ const AboutUs = () => {
 
         {/* FEATURE BOX */}
         <motion.div
-          className="feature-box"
+          className="feature-box order_mobile_3"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

@@ -450,7 +450,7 @@ body {
    QUOTE BUTTON
 ========================================= */
 
-.quote-btn {
+.contact_quote-btn {
   height: 46px !important;
 
   padding: 0 20px;
@@ -461,8 +461,8 @@ body {
 
   gap: 10px;
 
-  background: #f7b20d !important;
-  color: #111 !important;
+  background: #111!important;
+  color: #f7b20d !important;
 
   border-radius: 7px;
 
@@ -478,7 +478,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.quote-btn:hover {
+.contact_quote-btn:hover {
   background: #e9a400;
   color: #111 !important;
   transform: translateY(-2px);
@@ -807,10 +807,10 @@ body {
 }
 
 .main-img img {
-  width: 120%;
+  max-width: 120%;
   height: 100%;
   object-fit: cover;
-  transform: skewX(10deg) translateX(-30px);
+  transform: skewX(10deg) translateX(-18px);
 }
 
 .small-img {
@@ -1634,7 +1634,8 @@ margin-left: 5px;
 
   margin: auto;
 
-  min-height: 370px;
+  min-height: 400px;
+  background-repeat: no-repeat;
 
   position: relative;
   z-index: 2;
@@ -1782,7 +1783,8 @@ margin-left: 5px;
   inset: 0;
   z-index: 0;
 
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center right;
 
   opacity: 0;
@@ -2078,7 +2080,7 @@ margin-left: 5px;
   }
 
   .stat-title {
-    font-size: 10px;
+    font-size: 13px;
   }
 
 }
@@ -2158,6 +2160,7 @@ margin-left: 5px;
 /* HEADING LINE */
 
 .heading-line {
+  display: none !important;
   width: 48px;
   height: 3px;
 
@@ -3079,7 +3082,7 @@ margin-left: 5px;
 
   .process-item h3 {
 
-    font-size: 10px;
+    font-size: 15px;
 
   }
 
@@ -5416,6 +5419,10 @@ display: none !important;
 
  @media (min-width: 320px) and (max-width: 768px)
  {
+  .hero-bg-slide
+  {
+  background-size: cover !important;
+  }
   .header-container
   {
     justify-content: space-between !important;
@@ -5453,10 +5460,31 @@ display: none !important;
  {
   display: block !important;
   text-align: center;
-    width: 100%;
-      padding: 10px 20px;
+    width: 100% !important;
+      padding: 10px 20px !important;
 
  }
+ .footer_copyrights p
+ {
+  margin-bottom: 10px;
+ }
+ .footer_copyrights p a
+ {
+  line-height: 25px;
+ }
+ .order_mobile_2
+ {
+ order: 2;
+ }
+.order_mobile_1
+ {
+ order: 1;
+ }
+ .order_mobile_3
+ {
+  order: 3;
+ }
+
  }
 
 
@@ -5538,19 +5566,19 @@ display: none !important;
   text-align: center;
 }
 
-.section-label {
+.section-label-small-text
+{
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
-
   color: #d99d18;
   font-size: 14px;
   font-weight: 700;
   /* letter-spacing: 1.5px; */
   margin-bottom: 15px;
 }
-
 .section-label span {
   width: 42px;
   height: 2px;
@@ -5564,6 +5592,7 @@ display: none !important;
   font-size: 32px;
   line-height: 45px;
   font-weight: 700;
+  margin-bottom: 15px !important;
 }
 
 .solutions-header h2 strong {
@@ -5597,7 +5626,7 @@ display: none !important;
   margin: auto;
 
   color: #626872;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -5607,7 +5636,7 @@ display: none !important;
 
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
 
@@ -5763,8 +5792,8 @@ display: none !important;
 
   color: #0c2343;
 
-  font-size: 23px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 35px;
 }
 
 .small-line {
@@ -5781,8 +5810,8 @@ display: none !important;
 
   color: #626872;
 
-  font-size: 14px;
-  line-height: 1.65;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .solution-content a {
@@ -5794,7 +5823,7 @@ display: none !important;
 
   color: #0c2343;
 
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 
   text-decoration: none;
@@ -5966,7 +5995,8 @@ display: none !important;
   }
 
   .solutions-header h2 {
-    font-size: 34px;
+    font-size: 24px;
+    line-height: 35px;
   }
 
   .solutions-header p {
@@ -5974,6 +6004,9 @@ display: none !important;
   }
 
   .section-label {
+    font-size: 14px;
+  }
+   .section-label-small-text {
     font-size: 14px;
   }
 
@@ -6002,11 +6035,11 @@ display: none !important;
   }
 
   .solution-content h3 {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   .solution-content p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
   }
 
@@ -6050,4 +6083,10 @@ display: none !important;
     grid-template-columns: 1fr;
   }
 
+}
+
+
+.yellow_text_highlight
+{
+  color: #f2ad22;
 }

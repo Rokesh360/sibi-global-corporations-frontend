@@ -154,7 +154,7 @@ const WhyChooseUs = () => {
               ease: "easeOut",
             }}
           >
-            Building Stronger Foundations
+            Building <span className="yellow_text_highlight">Stronger Foundations</span>
             <br />
             for Your Business
           </motion.h2>

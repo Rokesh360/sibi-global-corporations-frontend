@@ -80,7 +80,7 @@ const CertificationCTA = () => {
 
             <motion.a
               href="#"
-              className="quote-btn"
+              className="contact_quote-btn"
               variants={fadeUp}
               initial="hidden"
               whileInView="show"
