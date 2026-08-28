@@ -1,43 +1,47 @@
-import React from "react";
+import EngineeringImage from "../../public/assets/img/engineering.jpg";
+import LogisticsImage from "../../public/assets/img/logistics.jpg";
+import AutomotiveImage from "../../public/assets/img/automotive.jpg";
+import CommercialImage from "../../public/assets/img/commercial.jpg";
+import PowerImage from "../../public/assets/img/power-energy.jpg";
 
 const industries = [
   {
-   image: "/assets/img/engineering.jpg",
+   image: EngineeringImage,
     alt: "Manufacturing",
     icon: "⚙",
     title: <>Manufacturing</>,
     description: <>Production facilities & expansion projects</>,
   },
   {
-    image: "/assets/img/logistics.jpg",
+    image: LogisticsImage,
     alt: "Logistics and Warehousing",
     icon: "▣",
     title: <>Logistics &<br />Warehousing</>,
     description: <>Storage & distribution operations</>,
   },
   {
-    image: "/assets/img/automotive.jpg",
+    image: AutomotiveImage,
     alt: "Automotive",
     icon: "🚗",
     title: <>Automotive</>,
     description: <>Automotive manufacturing facilities</>,
   },
   {
-    image: "/assets/img/engineering.jpg",
+    image: EngineeringImage,
     alt: "Engineering and Heavy Industry",
     icon: "⚒",
     title: <>Engineering &<br />Heavy Industry</>,
     description: <>Robust infrastructure for heavy-duty operations</>,
   },
   {
-    image: "/assets/img/commercial.jpg",
+    image: CommercialImage,
     alt: "Commercial Buildings",
     icon: "▦",
     title: <>Commercial Buildings</>,
     description: <>Business spaces & complexes</>,
   },
   {
-    image: "/assets/img/power-energy.jpg",
+    image: PowerImage,
     alt: "Power and Energy",
     icon: "⚡",
     title: <>Pharmaceutical</>,

@@ -1,4 +1,5 @@
 import React from "react";
+import FooterBg from "../../../public/assets/img/footer-bg.png";
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
     <footer
       className="footer-section"
       style={{
-        backgroundImage: "url('/assets/img/footer-bg.png')",
+        backgroundImage: `url(${FooterBg})`,
          backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "right",
@@ -105,7 +106,7 @@ export default function Footer() {
       </div>
        
     </footer>
-    <div class="footer_copyrights">
+    <div className="footer_copyrights">
         <p><a> © 2026 Future Finance Gold Loan.
                 All Rights Reserved.</a></p>
         <p><a href="" target="_blank">
