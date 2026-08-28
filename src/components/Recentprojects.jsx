@@ -1,6 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Carousel } from 'antd';
+import { Carousel } from "antd";
+import { motion } from "framer-motion";
 
 import ProjectWarehouseImg from "../../public/assets/img/project-warehouse.jpg";
 import ProjectManufacturingImg from "../../public/assets/img/project-manufacturing.jpg";
@@ -38,36 +39,33 @@ const RecentProjects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
 
-  // Handle slide change
   const handleSlideChange = (current) => {
     setActiveIndex(current);
   };
 
-  // Go to previous slide
   const goPrev = () => {
     if (carouselRef.current) {
       carouselRef.current.prev();
       setIsAutoplay(false);
-      // Resume autoplay after 3 seconds of inactivity
+
       setTimeout(() => setIsAutoplay(true), 3000);
     }
   };
 
-  // Go to next slide
   const goNext = () => {
     if (carouselRef.current) {
       carouselRef.current.next();
       setIsAutoplay(false);
-      // Resume autoplay after 3 seconds of inactivity
+
       setTimeout(() => setIsAutoplay(true), 3000);
     }
   };
 
-  // Go to specific slide via dots
   const goToSlide = (index) => {
     if (carouselRef.current) {
       carouselRef.current.goTo(index);
       setIsAutoplay(false);
+
       setTimeout(() => setIsAutoplay(true), 3000);
     }
   };
@@ -75,67 +73,174 @@ const RecentProjects = () => {
   const isAtStart = activeIndex === 0;
   const isAtEnd = activeIndex === projects.length - 1;
 
-  // Custom arrow settings for continuous scroll
   const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: isAutoplay,
-  autoplaySpeed: 3000,
-  pauseOnHover: true,
-  afterChange: handleSlideChange,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: isAutoplay,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    afterChange: handleSlideChange,
 
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
   return (
     <section className="projects-section">
       <div className="projects-container">
 
-        {/* -------------------------------------------------
-            LEFT CONTENT
-        ------------------------------------------------- */}
-        <div className="projects-intro">
-          <span className="section-label">OUR RECENT PROJECTS</span>
+        {/* LEFT CONTENT */}
+        <motion.div
+          className="projects-intro"
+          initial={{
+            opacity: 0,
+            x: -80,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.3,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+        >
+          <motion.span
+            className="section-label"
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+            }}
+          >
+            OUR RECENT PROJECTS
+          </motion.span>
 
-          <h2>
+          <motion.h2
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.7,
+              delay: 0.1,
+            }}
+          >
             Structures That
             <span> Power Growth</span>
-          </h2>
+          </motion.h2>
 
-          <p>
+          <motion.p
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.2,
+            }}
+          >
             A glimpse of some industrial and commercial projects delivered
             by SIBI Global Corporation.
-          </p>
+          </motion.p>
 
-          <a href="#" className="yellow-btn">
+          <motion.a
+            href="#"
+            className="yellow-btn"
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.3,
+            }}
+            whileHover={{
+              scale: 1.04,
+            }}
+            whileTap={{
+              scale: 0.97,
+            }}
+          >
             View All Projects
-            <span>→</span>
-          </a>
-        </div>
 
-        {/* -------------------------------------------------
-            PROJECT SLIDER WITH ANT DESIGN CAROUSEL
-        ------------------------------------------------- */}
-        <div className="projects-slider">
+            <motion.span
+              whileHover={{
+                x: 7,
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+            >
+              →
+            </motion.span>
+          </motion.a>
+        </motion.div>
 
+        {/* PROJECT SLIDER */}
+        <motion.div
+          className="projects-slider"
+          initial={{
+            opacity: 0,
+            x: 80,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.9,
+            ease: "easeOut",
+            delay: 0.15,
+          }}
+        >
           <button
             type="button"
             className="project-arrow project-prev"
@@ -149,16 +254,46 @@ const RecentProjects = () => {
             <Carousel ref={carouselRef} {...settings}>
               {projects.map((project, index) => (
                 <div key={index}>
-                  <div className="project-card">
-                    <div className="project-image">
-                      <img src={project.image} alt={project.alt} />
-                    </div>
+                  <motion.div
+                    className="project-card"
+                    whileHover={{
+                      y: -8,
+                    }}
+                    transition={{
+                      duration: 0.3,
+                    }}
+                  >
+                    <motion.div
+                      className="project-image"
+                      whileHover={{
+                        scale: 1.03,
+                      }}
+                      transition={{
+                        duration: 0.4,
+                      }}
+                    >
+                      <motion.img
+                        src={project.image}
+                        alt={project.alt}
+                        whileHover={{
+                          scale: 1.08,
+                        }}
+                        transition={{
+                          duration: 0.5,
+                        }}
+                      />
+                    </motion.div>
 
-                    <div className="project-info">
+                    <motion.div
+                      className="project-info"
+                      whileHover={{
+                        x: 4,
+                      }}
+                    >
                       <h3>{project.title}</h3>
                       <p>{project.location}</p>
-                    </div>
-                  </div>
+                    </motion.div>
+                  </motion.div>
                 </div>
               ))}
             </Carousel>
@@ -175,19 +310,22 @@ const RecentProjects = () => {
 
           <div className="project-dots">
             {projects.map((_, index) => (
-              <span
+              <motion.span
                 key={index}
-                className={`dot ${index === activeIndex ? "active" : ""}`}
+                className={`dot ${
+                  index === activeIndex ? "active" : ""
+                }`}
                 onClick={() => goToSlide(index)}
                 role="button"
                 tabIndex={0}
                 aria-label={`Go to slide ${index + 1}`}
+                whileHover={{
+                  scale: 1.3,
+                }}
               />
             ))}
           </div>
-
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );

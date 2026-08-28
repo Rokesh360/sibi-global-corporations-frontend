@@ -1,214 +1,132 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 35 },
+  show: { opacity: 1, y: 0 },
+};
+
+const contacts = [
+  ["☎", "91 7708945267", "Call Us"],
+  ["✉", "info@siglobal.com", "Email Us"],
+  [
+    "●",
+    <>No 111, West Street, SIPCOT Industries Kudikadu, Cuddalore-607005.</>,
+    "Our Location",
+  ],
+];
 
 const CertificationCTA = () => {
   return (
     <>
-
-      {/* <section className="certification-section">
-        <div className="gold-corner"></div>
-
-        <div className="cert-content">
-
-         
-          <div className="cert-intro">
-
-            <span className="small-title">
-              CERTIFICATIONS &amp; STANDARDS
-            </span>
-
-            <div className="gold-line"></div>
-
-            <h1>
-              Committed to{" "}
-              <span>Quality.</span>{" "}
-              Built on{" "}
-              <span>Standards.</span>
-            </h1>
-
-            <p>
-              We follow internationally recognized standards
-              to deliver safe, reliable and high-quality steel
-              solutions.
-            </p>
-
-            <div className="dot-pattern"></div>
-
-          </div>
-
-
-
-          <div className="cert-cards">
-
-          
-            <div className="cert-card">
-
-              <div className="hex-icon">
-                <strong>ISO</strong>
-              </div>
-
-              <h3>ISO 9001:2015</h3>
-
-              <p>
-                Quality
-                <br />
-                Management
-              </p>
-
-              <span className="card-line"></span>
-
-            </div>
-
-
-
-            <div className="cert-card">
-
-              <div className="hex-icon">
-                <strong>ISO</strong>
-              </div>
-
-              <h3>ISO 14001:2015</h3>
-
-              <p>
-                Environmental
-                <br />
-                Management
-              </p>
-
-              <span className="card-line"></span>
-
-            </div>
-
-
-  
-            <div className="cert-card">
-
-              <div className="hex-icon">
-                <strong>ISO</strong>
-              </div>
-
-              <h3>ISO 45001:2018</h3>
-
-              <p>
-                Occupational
-                <br />
-                Health &amp; Safety
-              </p>
-
-              <span className="card-line"></span>
-
-            </div>
-
-
-
-            <div className="cert-card">
-
-              <div className="hex-icon bsi">
-                <strong>BSI</strong>
-              </div>
-
-              <h3>BIS Compliant</h3>
-
-              <p>
-                Structural Steel
-                <br />
-                Fabrication
-              </p>
-
-              <span className="card-line"></span>
-
-            </div>
-
-          </div>
-        </div>
-      </section> */}
-
-
- 
-
       <section className="cta-section">
 
-        <div className="building-image">
-          <div className="building-overlay"></div>
-        </div>
+        {/* Building Image */}
+        <motion.div
+          className="building-image"
+          initial={{ opacity: 0, scale: 1.08 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.div
+            className="building-overlay"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          />
+        </motion.div>
 
-
-  
-        <div className="quote-box">
-
-          <div className="quote-shape"></div>
+        {/* Quote Box */}
+        <motion.div
+          className="quote-box"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div
+            className="quote-shape"
+            initial={{ scale: 0, rotate: -20 }}
+            whileInView={{ scale: 1, rotate: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          />
 
           <div className="quote-content">
-
-            <h2>
+            <motion.h2
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              transition={{ delay: 0.25, duration: 0.6 }}
+            >
               Ready to Build
               <br />
               Something Great?
-            </h2>
+            </motion.h2>
 
-            <p>
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              transition={{ delay: 0.35, duration: 0.6 }}
+            >
               Let's discuss your project requirements.
-            </p>
+            </motion.p>
 
-            <a href="#" className="quote-btn">
+            <motion.a
+              href="#"
+              className="quote-btn"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              transition={{ delay: 0.45, duration: 0.6 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
               Get Project Quote
-              <span>→</span>
-            </a>
-
+              <motion.span whileHover={{ x: 7 }}>→</motion.span>
+            </motion.a>
           </div>
+        </motion.div>
 
-        </div>
-
-
-
+        {/* Contact Details */}
         <div className="contact-details">
+          {contacts.map(([icon, title, label], index) => (
+            <motion.div
+              className="contact-item"
+              key={label}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              whileHover={{ y: -6 }}
+            >
+              <motion.div
+                className="contact-icon"
+                whileHover={{ scale: 1.15, rotate: 8 }}
+                transition={{ duration: 0.2 }}
+              >
+                {icon}
+              </motion.div>
 
-         
-          <div className="contact-item">
-
-            <div className="contact-icon">
-              ☎
-            </div>
-
-            <h4>91 7708945267</h4>
-
-            <span>Call Us</span>
-
-          </div>
-
-
-          
-          <div className="contact-item">
-
-            <div className="contact-icon">
-              ✉
-            </div>
-
-            <h4>info@siglobal.com</h4>
-
-            <span>Email Us</span>
-
-          </div>
-
-
-         
-          <div className="contact-item">
-
-            <div className="contact-icon">
-              ●
-            </div>
-
-            <h4>No 111, West Street, SIPCOT Industries Kudikadu, Cuddalore-607005.</h4>
-
-            <span>Our Location</span>
-
-          </div>
-
+              <h4>{title}</h4>
+              <span>{label}</span>
+            </motion.div>
+          ))}
         </div>
 
       </section>
-
-
-
     </>
   );
 };

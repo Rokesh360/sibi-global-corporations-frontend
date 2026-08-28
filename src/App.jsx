@@ -4,7 +4,7 @@ import Footer from "./components/Layout/Footer";
 import HeroBanner from "./components/HeroBanner";
 import AboutUs from "./components/AboutUs";
 import Solution from "./components/Solution";
-import Loader from "./components/Loader";
+import Loader from "./components/Layout/Loader";
 import "./App.css";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Manufacturing from "./components/Manufacturing";

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import PreEngineering from "../../public/assets/img/solution/peb-building.jpg";
 import SteelFabrication from "../../public/assets/img/solution/steel-fabrication.jpg";
@@ -6,8 +7,6 @@ import IndustrialShed from "../../public/assets/img/solution/industrial-shed.jpg
 import SteelErection from "../../public/assets/img/solution/steel-erection.jpg";
 import MezzanineFloors from "../../public/assets/img/solution/mezzanine-floor.jpg";
 import TurnkeySolutions from "../../public/assets/img/solution/turnkey-solutions.jpg";
-
-
 
 const solutions = [
   {
@@ -72,56 +71,46 @@ const solutions = [
   },
 ];
 
-// const benefits = [
-//   {
-//     icon: "✓",
-//     title: "High Quality",
-//     text: "Materials",
-//   },
-//   {
-//     icon: "♙",
-//     title: "Experienced",
-//     text: "Professionals",
-//   },
-//   {
-//     icon: "⚙",
-//     title: "Advanced",
-//     text: "Technology",
-//   },
-//   {
-//     icon: "◷",
-//     title: "On-Time",
-//     text: "Delivery",
-//   },
-//   {
-//     icon: "◇",
-//     title: "Safety",
-//     text: "First",
-//   },
-//   {
-//     icon: "↗",
-//     title: "End-to-End",
-//     text: "Support",
-//   },
-// ];
-
 const Solutions = () => {
   return (
     <section className="solutions-section">
+
       {/* Decorative Elements */}
-      <div className="solutions-dots dots-left"></div>
-      <div className="solutions-dots dots-right"></div>
+      <motion.div
+        className="solutions-dots dots-left"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      />
+
+      <motion.div
+        className="solutions-dots dots-right"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
 
       <div className="solutions-container">
 
         {/* ================= HEADER ================= */}
-        <div className="solutions-header">
-
-          <div className="section-label">
-            
+        <motion.div
+          className="solutions-header"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div
+            className="section-label"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             OUR SOLUTIONS
-            
-          </div>
+          </motion.div>
 
           <h2>
             Complete Steel Solutions for
@@ -133,86 +122,129 @@ const Solutions = () => {
             From engineering to execution, we deliver high-quality steel
             solutions that power your projects and drive your success.
           </p>
-
-        </div>
+        </motion.div>
 
         {/* ================= SOLUTION GRID ================= */}
         <div className="solutions-grid">
-
           {solutions.map((item, index) => (
-            <div
+            <motion.div
               className={`solution-card ${item.theme}`}
               key={item.number}
+              initial={{
+                opacity: 0,
+                y: index % 2 === 0 ? 60 : -60,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.12,
+                ease: "easeOut",
+              }}
+              whileHover={{
+                y: -8,
+                transition: { duration: 0.25 },
+              }}
             >
-
               {/* Image */}
-              <div className="solution-image">
-
-                <img
+              <motion.div
+                className="solution-image"
+                whileHover="hover"
+              >
+                <motion.img
                   src={item.image}
                   alt={item.title}
+                  variants={{
+                    hover: {
+                      scale: 1.06,
+                      transition: { duration: 0.5 },
+                    },
+                  }}
                 />
 
-                <div className="number-circle">
+                <motion.div
+                  className="number-circle"
+                  initial={{ scale: 0, rotate: -45 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.12 + 0.25,
+                    type: "spring",
+                  }}
+                >
                   {item.number}
-                </div>
+                </motion.div>
 
-                <div className="image-corner"></div>
-
-              </div>
+                <div className="image-corner" />
+              </motion.div>
 
               {/* Content */}
               <div className="solution-content">
+                <motion.h3
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.12 + 0.15,
+                  }}
+                >
+                  {item.title}
+                </motion.h3>
 
-                {/* <div className="solution-icon">
-                  {item.icon}
-                </div> */}
+                <motion.div
+                  className="small-line"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.12 + 0.25,
+                  }}
+                />
 
-                <h3>{item.title}</h3>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.12 + 0.3,
+                  }}
+                >
+                  {item.description}
+                </motion.p>
 
-                <div className="small-line"></div>
-
-                <p>{item.description}</p>
-
-                <a href="#">
+                <motion.a
+                  href="#"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.12 + 0.4,
+                  }}
+                  whileHover={{ x: 6 }}
+                >
                   {item.link}
-                  <span>→</span>
-                </a>
-
+                  <motion.span
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    →
+                  </motion.span>
+                </motion.a>
               </div>
-
-            </div>
+            </motion.div>
           ))}
-
         </div>
-
-        {/* ================= BENEFITS BAR ================= */}
-        {/* <div className="benefits-bar">
-
-          {benefits.map((item, index) => (
-            <React.Fragment key={index}>
-
-              <div className="benefit-item">
-
-                <div className="benefit-icon">
-                  {item.icon}
-                </div>
-
-                <div>
-                  <strong>{item.title}</strong>
-                  <span>{item.text}</span>
-                </div>
-
-              </div>
-
-              {index !== benefits.length - 1 && (
-                <div className="benefit-divider"></div>
-              )}
-
-            </React.Fragment>
-          ))}
-
-        </div> */}
 
       </div>
     </section>

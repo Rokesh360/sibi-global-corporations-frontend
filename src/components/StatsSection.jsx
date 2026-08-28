@@ -1,48 +1,49 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const StatsSection = () => {
   const [counts, setCounts] = useState({
     projects: 0,
     experience: 0,
     capacity: 0,
-    industries: 0
+    industries: 0,
   });
-  
+
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
 
   const statsData = [
     {
-      id: 'projects',
-      icon: '♙',
+      id: "projects",
+      icon: "♙",
       targetNumber: 250,
-      displayNumber: '250+',
-      title: 'Projects Delivered',
-      suffix: '+',
+      displayNumber: "250+",
+      title: "Projects Delivered",
+      suffix: "+",
     },
     {
-      id: 'experience',
-      icon: '◎',
+      id: "experience",
+      icon: "◎",
       targetNumber: 15,
-      displayNumber: '15+',
-      title: 'Years of Experience',
-      suffix: '+',
+      displayNumber: "15+",
+      title: "Years of Experience",
+      suffix: "+",
     },
     {
-      id: 'capacity',
-      icon: '♙',
+      id: "capacity",
+      icon: "♙",
       targetNumber: 12000,
-      displayNumber: '12,000+',
-      title: 'Fabrication Capacity',
-      suffix: '+ MT',
+      displayNumber: "12,000+",
+      title: "Fabrication Capacity",
+      suffix: "+ MT",
     },
     {
-      id: 'industries',
-      icon: '♧',
+      id: "industries",
+      icon: "♧",
       targetNumber: 20,
-      displayNumber: '20+',
-      title: 'Industries Served',
-      suffix: '+',
+      displayNumber: "20+",
+      title: "Industries Served",
+      suffix: "+",
     },
   ];
 
@@ -51,7 +52,7 @@ const StatsSection = () => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
-  // Animate counting
+  // Detect section visibility
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -79,7 +80,7 @@ const StatsSection = () => {
   useEffect(() => {
     if (!hasAnimated) return;
 
-    const duration = 2000; // 2 seconds
+    const duration = 2000;
     const steps = 60;
     const interval = duration / steps;
 
@@ -87,13 +88,14 @@ const StatsSection = () => {
       projects: 250,
       experience: 15,
       capacity: 12000,
-      industries: 20
+      industries: 20,
     };
 
     let currentStep = 0;
 
     const timer = setInterval(() => {
       currentStep++;
+
       const progress = currentStep / steps;
 
       setCounts({
@@ -110,6 +112,7 @@ const StatsSection = () => {
           capacity: targets.capacity,
           industries: targets.industries,
         });
+
         clearInterval(timer);
       }
     }, interval);
@@ -117,22 +120,25 @@ const StatsSection = () => {
     return () => clearInterval(timer);
   }, [hasAnimated]);
 
-  // Get the current count for each stat
   const getCount = (id) => {
-    switch(id) {
-      case 'projects': return counts.projects;
-      case 'experience': return counts.experience;
-      case 'capacity': return counts.capacity;
-      case 'industries': return counts.industries;
-      default: return 0;
+    switch (id) {
+      case "projects":
+        return counts.projects;
+      case "experience":
+        return counts.experience;
+      case "capacity":
+        return counts.capacity;
+      case "industries":
+        return counts.industries;
+      default:
+        return 0;
     }
   };
 
-  // Get display suffix
   const getSuffix = (stat) => {
-    if (stat.id === 'capacity') return ' MT';
+    if (stat.id === "capacity") return " MT";
     if (stat.suffix) return stat.suffix;
-    return '';
+    return "";
   };
 
   return (
@@ -141,18 +147,130 @@ const StatsSection = () => {
         {statsData.map((stat, index) => (
           <React.Fragment key={stat.id}>
             {/* Stat Item */}
-            <div className="stat-box" >
-              <div className="stat-icon">{stat.icon}</div>
-              <div className="stat-number">
+            <motion.div
+              className="stat-box"
+              initial={{
+                opacity: 0,
+                y: 60,
+                scale: 0.9,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.4,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              whileHover={{
+                y: -8,
+                transition: {
+                  duration: 0.25,
+                },
+              }}
+            >
+              {/* Icon */}
+              <motion.div
+                className="stat-icon"
+                initial={{
+                  opacity: 0,
+                  scale: 0,
+                  rotate: -30,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  rotate: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.2 + index * 0.15,
+                  type: "spring",
+                  stiffness: 180,
+                }}
+                whileHover={{
+                  scale: 1.15,
+                  rotate: 10,
+                }}
+              >
+                {stat.icon}
+              </motion.div>
+
+              {/* Number */}
+              <motion.div
+                className="stat-number"
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.25 + index * 0.15,
+                }}
+              >
                 {formatNumber(getCount(stat.id))}
                 <small>{getSuffix(stat)}</small>
-              </div>
-              <div className="stat-title">{stat.title}</div>
-            </div>
+              </motion.div>
 
-            {/* Divider - Don't add after the last item */}
+              {/* Title */}
+              <motion.div
+                className="stat-title"
+                initial={{
+                  opacity: 0,
+                  y: 15,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.35 + index * 0.15,
+                }}
+              >
+                {stat.title}
+              </motion.div>
+            </motion.div>
+
+            {/* Divider */}
             {index < statsData.length - 1 && (
-              <div className="stat-divider"></div>
+              <motion.div
+                className="stat-divider"
+                initial={{
+                  opacity: 0,
+                  scaleY: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scaleY: 1,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.4 + index * 0.15,
+                }}
+              ></motion.div>
             )}
           </React.Fragment>
         ))}
