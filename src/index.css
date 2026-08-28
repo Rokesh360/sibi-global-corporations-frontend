@@ -1567,9 +1567,9 @@ margin-left: 5px;
 
   position: relative;
 
-  background-image: url("../public/assets/img/steel-building.png");
+  /* background-image: url("../public/assets/img/steel-building.png");
   background-size: cover;
-  background-position: center right;
+  background-position: center right; */
 
   overflow: hidden;
 }
@@ -1581,6 +1581,9 @@ margin-left: 5px;
   position: absolute;
   inset: 0;
 
+  opacity: 0;
+  transition: opacity 0.6s ease;
+
   background:
     linear-gradient(90deg,
       rgba(3, 25, 54, 0.99) 0%,
@@ -1588,6 +1591,10 @@ margin-left: 5px;
       rgba(7, 40, 76, 0.75) 51%,
       rgba(6, 40, 76, 0.10) 72%,
       rgba(6, 40, 76, 0) 100%);
+}
+
+.hero-section.first-slide .hero-overlay {
+  opacity: 1;
 }
 
 
@@ -1606,9 +1613,16 @@ margin-left: 5px;
 
   background: rgba(255, 255, 255, 0.13);
 
+  opacity: 0;
+  transition: opacity 0.6s ease;
+
   transform: skewX(22deg);
 
   pointer-events: none;
+}
+
+.hero-section.first-slide::after {
+  opacity: 1;
 }
 
 
@@ -1632,8 +1646,19 @@ margin-left: 5px;
 .hero-content {
   width: 600px;
   padding: 50px 0;
+
+  transition: opacity 0.6s ease;
 }
 
+.hero-content.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-content.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* HEADING */
 
@@ -1748,6 +1773,65 @@ margin-left: 5px;
 .engineer-icon {
   color: #f7b51b;
   font-size: 20px;
+}
+
+/* SLIDING BACKGROUND IMAGES */
+
+.hero-bg-slide {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-size: cover;
+  background-position: center right;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-bg-slide.active {
+  opacity: 1;
+}
+
+/* =========================
+   HERO SLIDER DOTS
+========================= */
+
+.hero-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  z-index: 3;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 0;
+}
+
+.hero-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-dot.active {
+  background: #f7b51b;
+  width: 24px;
+  border-radius: 5px;
 }
 
 
