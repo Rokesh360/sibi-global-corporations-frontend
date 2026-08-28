@@ -4,12 +4,12 @@ const CertificationCTA = () => {
   return (
     <>
 
-      <section className="certification-section">
+      {/* <section className="certification-section">
         <div className="gold-corner"></div>
 
         <div className="cert-content">
 
-          {/* Left Content */}
+         
           <div className="cert-intro">
 
             <span className="small-title">
@@ -120,7 +120,7 @@ const CertificationCTA = () => {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
 
  
@@ -169,7 +169,7 @@ const CertificationCTA = () => {
               ☎
             </div>
 
-            <h4>+91 98765 43210</h4>
+            <h4>91 7708945267</h4>
 
             <span>Call Us</span>
 
@@ -197,8 +197,7 @@ const CertificationCTA = () => {
               ●
             </div>
 
-            <h4>Plot No. 29, Industrial Area,
-Hyderabad - 500001, India.</h4>
+            <h4>No 111, West Street, SIPCOT Industries Kudikadu, Cuddalore-607005.</h4>
 
             <span>Our Location</span>
 

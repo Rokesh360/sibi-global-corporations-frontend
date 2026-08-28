@@ -147,6 +147,7 @@ body {
 /* Dropdown arrow */
 
 .dropdown-arrow {
+  display: none !important;
   width: 20px;
   height: 20px;
 
@@ -5003,7 +5004,7 @@ display: none !important;
 }
 
 .footer-column li {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 
@@ -5392,3 +5393,577 @@ display: none !important;
     font-weight: 400;
     color: #fff;
   }
+
+
+
+
+  /* =========================================
+   SOLUTIONS SECTION
+========================================= */
+
+.solutions-section {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+  background: #f8f9fb;
+   font-family: 'Poppins', sans-serif;
+}
+
+.solutions-container {
+  width: min(1400px, 92%);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   DECORATIVE DOTS
+========================================= */
+
+.solutions-dots {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+
+  background-image: radial-gradient(
+    #dca52a 1.5px,
+    transparent 1.5px
+  );
+
+  background-size: 14px 14px;
+  opacity: 0.2;
+}
+
+.dots-left {
+  top: 30px;
+  left: -20px;
+}
+
+.dots-right {
+  top: 20px;
+  right: -20px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.solutions-header {
+  max-width: 1000px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  color: #d99d18;
+  font-size: 14px;
+  font-weight: 700;
+  /* letter-spacing: 1.5px; */
+  margin-bottom: 15px;
+}
+
+.section-label span {
+  width: 42px;
+  height: 2px;
+  background: #d99d18;
+}
+
+.solutions-header h2 {
+  margin: 0;
+
+  color: #0c2343;
+  font-size: 32px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.solutions-header h2 strong {
+  color: #dda323;
+  font-weight: 700;
+}
+
+.heading-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.heading-line i {
+  width: 55px;
+  height: 2px;
+  background: #dca52a;
+}
+
+.heading-line b {
+  width: 8px;
+  height: 8px;
+  background: #dca52a;
+  transform: rotate(45deg);
+}
+
+.solutions-header p {
+  max-width: 760px;
+  margin: auto;
+
+  color: #626872;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   SOLUTION GRID
+========================================= */
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.solution-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48% 52%;
+
+  min-height: 315px;
+
+  overflow: hidden;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 10px 35px rgba(12, 35, 67, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(12, 35, 67, 0.16);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.solution-image {
+  position: relative;
+  min-height: 315px;
+  overflow: hidden;
+}
+
+.solution-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.solution-card:hover .solution-image img {
+  transform: scale(1.08);
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.number-circle {
+  position: absolute;
+
+  top: 20px;
+  left: 18px;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background: #0c2343;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  z-index: 3;
+}
+
+.gold .number-circle {
+  background: #dda323;
+  color: #0c2343;
+}
+
+/* =========================================
+   IMAGE CORNER
+========================================= */
+
+.image-corner {
+  display: none !important;
+  position: absolute;
+
+  right: -1px;
+  top: 0;
+
+  width: 40px;
+  height: 100%;
+
+  background: #ffffff;
+
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 90%,
+    55% 50%,
+    0 10%
+  );
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.solution-content {
+  position: relative;
+  padding: 32px 25px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.solution-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #dda323;
+
+  font-size: 25px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.solution-content h3 {
+  margin: 0;
+
+  color: #0c2343;
+
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.small-line {
+  width: 32px;
+  height: 3px;
+
+  margin: 12px 0;
+
+  background: #dda323;
+}
+
+.solution-content p {
+  margin: 0;
+
+  color: #626872;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.solution-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: auto;
+
+  color: #0c2343;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: gap 0.3s ease;
+}
+
+.solution-content a span {
+  color: #dda323;
+  font-size: 22px;
+}
+
+.solution-content a:hover {
+  gap: 16px;
+}
+
+/* =========================================
+   NAVY CARD
+========================================= */
+
+.solution-card.navy {
+  background: #0c2343;
+}
+
+.solution-card.navy .solution-content h3,
+.solution-card.navy .solution-content p {
+  color: #ffffff;
+}
+
+.solution-card.navy .solution-content p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.solution-card.navy .solution-content a {
+  color: #ffffff;
+}
+
+/* =========================================
+   GOLD CARD
+========================================= */
+
+.solution-card.gold {
+  border-top: 4px solid #dda323;
+}
+
+.solution-card.gold .solution-content {
+  background: #ffffff;
+}
+
+/* =========================================
+   BENEFITS BAR
+========================================= */
+
+.benefits-bar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: 45px;
+
+  padding: 22px 30px;
+
+  background: #0c2343;
+
+  border-radius: 22px 22px 0 0;
+
+  overflow: hidden;
+}
+
+.benefits-bar::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 7px;
+  height: 100%;
+
+  background: #dda323;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  color: #ffffff;
+}
+
+.benefit-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dda323;
+  border-radius: 50%;
+
+  color: #dda323;
+
+  font-size: 20px;
+}
+
+.benefit-item strong,
+.benefit-item span {
+  display: block;
+}
+
+.benefit-item strong {
+  font-size: 14px;
+}
+
+.benefit-item span {
+  margin-top: 3px;
+
+  color: #ffffff;
+  opacity: 0.7;
+
+  font-size: 13px;
+}
+
+.benefit-divider {
+  width: 1px;
+  height: 42px;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .benefit-divider {
+    display: none;
+  }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .solutions-section {
+    padding: 45px 0px;
+  }
+
+  .solutions-header {
+    margin-bottom: 35px;
+  }
+
+  .solutions-header h2 {
+    font-size: 34px;
+  }
+
+  .solutions-header p {
+    font-size: 15px;
+  }
+
+  .section-label {
+    font-size: 14px;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .solution-card {
+    grid-template-columns: 45% 55%;
+    min-height: 300px;
+  }
+
+  .solution-image {
+    min-height: 300px;
+  }
+
+  .solution-content {
+    padding: 25px 18px 20px;
+  }
+
+  .solution-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+
+  .solution-content h3 {
+    font-size: 19px;
+  }
+
+  .solution-content p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .number-circle {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .benefits-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px 18px;
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .solution-card {
+    display: block;
+  }
+
+  .solution-image {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .solution-content {
+    min-height: 240px;
+  }
+
+  .image-corner {
+    display: none;
+  }
+
+  .benefits-bar {
+    grid-template-columns: 1fr;
+  }
+
+}

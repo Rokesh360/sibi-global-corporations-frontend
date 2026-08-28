@@ -27,19 +27,17 @@ export default function Footer() {
 
             <div className="footer-line"></div>
 
+            
             <div className="links-grid">
               <a href="#">About Us</a>
+              <a href="#">Solutions</a>
               <a href="#">Projects</a>
+              <a href="#">Manufacturing</a>  
               <a href="#">Industries</a>
-              <a href="#">Projects</a>
-              <a href="#">Engineering</a>
-              <a href="#">Technology</a>
               <a href="#">Blog</a>
-                <a href="#">Contact Us</a>
-              <a href="#">Why Sibi Global</a>
-              <a href="#">Our Process</a>
-              <a href="#">Quality & Safety</a>
-            
+              <a href="#">Career</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Quality</a>
             </div>
           </div>
 

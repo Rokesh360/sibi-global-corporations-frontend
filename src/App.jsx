@@ -3,6 +3,7 @@ import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import HeroBanner from "./components/HeroBanner";
 import AboutUs from "./components/AboutUs";
+import Solution from "./components/Solution";
 import Loader from "./components/Loader";
 import "./App.css";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -22,6 +23,7 @@ function App() {
       <main>
         <HeroBanner />
         <AboutUs />
+        <Solution />
         <WhyChooseUs />
         <Manufacturing />
         <StatsSection />
