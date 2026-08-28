@@ -128,7 +128,7 @@ const Industries = () => {
               delay: 0.15,
             }}
           >
-            Built for Diverse <span className="yellow_text_highlight">Industrial Requirements</span>
+            Built for Diverse <div className="yellow_text_highlight">Industrial Requirements</div>
           </motion.h2>
 
           <motion.div

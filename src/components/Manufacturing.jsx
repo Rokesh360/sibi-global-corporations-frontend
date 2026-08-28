@@ -100,7 +100,7 @@ const Manufacturing = () => {
               delay: 0.1,
             }}
           >
-            From Steel to <span className="yellow_text_highlight">Structure</span>
+            From Steel to <div className="yellow_text_highlight">Structure</div>
           </motion.h2>
 
           <motion.p

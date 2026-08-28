@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import steelBuildingImg from "../../public/assets/img/steel-building.png";
 import banner2Img from "../../public/assets/img/banner-2.png";
 import banner3Img from "../../public/assets/img/banner-3.png";
+import mobileBanner2Img from "../../public/assets/img/mobile_banner_2.png";
+import mobileBanner3Img from "../../public/assets/img/mobile_banner_3.png";
 
 const SLIDE_IMAGES = [
-  steelBuildingImg,
-  banner2Img,
-  banner3Img,
+  { desktop: steelBuildingImg, mobile: steelBuildingImg },
+  { desktop: banner2Img, mobile: mobileBanner2Img },
+  { desktop: banner3Img, mobile: mobileBanner3Img },
 ];
 
 const AUTOPLAY_INTERVAL = 5000;
@@ -29,9 +31,12 @@ export default function HeroBanner() {
     <section className={`hero-section ${showContent ? "first-slide" : ""}`}>
       {SLIDE_IMAGES.map((image, index) => (
         <div
-          key={image}
+          key={image.desktop}
           className={`hero-bg-slide ${index === activeIndex ? "active" : ""}`}
-          style={{ backgroundImage: `url(${image})` }}
+          style={{
+            "--bg-desktop": `url(${image.desktop})`,
+            "--bg-mobile": `url(${image.mobile})`,
+          }}
         />
       ))}
 

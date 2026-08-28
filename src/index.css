@@ -1783,8 +1783,8 @@ margin-left: 5px;
   inset: 0;
   z-index: 0;
 
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: var(--bg-desktop);
+  background-size: cover;
   background-position: center right;
 
   opacity: 0;
@@ -1793,6 +1793,13 @@ margin-left: 5px;
 
 .hero-bg-slide.active {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-bg-slide {
+    background-image: var(--bg-mobile);
+    /* background-position: center center; */
+  }
 }
 
 /* =========================
@@ -1994,9 +2001,9 @@ margin-left: 5px;
   /* HERO */
 
   .hero-section {
-    /* min-height: 500px; */
+    min-height: 600px;
 
-    background-position: 65% center;
+    background-position: 65% top;
   }
 
   .hero-overlay {
@@ -2007,7 +2014,7 @@ margin-left: 5px;
   }
 
   .hero-container {
-    min-height: 500px;
+    min-height: 400px;
   }
 
   .hero-content {
@@ -3115,7 +3122,12 @@ margin-left: 5px;
 
   .process-area {
 
-    height: 510px;
+    height: auto;
+    padding-top: 30px;
+  }
+  .process-item
+  {
+    margin-bottom: 20px;
   }
 
 
@@ -3498,12 +3510,6 @@ margin-left: 5px;
   .projects-slider {
     padding: 0 20px 30px;
   }
-
-  /* REMOVED: `.project-card:not(:first-child) { display: none; }`
-       That rule hid cards 2 and 3 outright, which made a real
-       sliding carousel impossible on mobile. The React component
-       now shows one card per page (visibleCount = 1 below 768px)
-       and the dots/arrows page through all of them. */
 
   .project-image {
     height: 190px;
@@ -5419,9 +5425,14 @@ display: none !important;
 
  @media (min-width: 320px) and (max-width: 768px)
  {
+  .main-img img
+  {
+      transform: skewX(10deg) translateX(-3px) !important;
+  }
   .hero-bg-slide
   {
   background-size: cover !important;
+  background-position: top !important;
   }
   .header-container
   {
