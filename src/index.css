@@ -6101,3 +6101,585 @@ display: none !important;
 {
   color: #f2ad22;
 }
+
+/* =========================================
+   ABOUT US - EXACT SCREENSHOT DESIGN
+========================================= */
+
+.sibi-about {
+  --navy: #0b2350;
+  --navy-deep: #081a3d;
+  --orange: #f2a022;
+  --ink: #35415a;
+  --cream: #f7f8fb;
+  --white: #ffffff;
+
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+.sibi-about * {
+  box-sizing: border-box;
+}
+
+.sibi-about img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sibi-about h1,
+.sibi-about h2,
+.sibi-about h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--navy);
+  margin: 0;
+}
+
+.sibi-about a {
+  text-decoration: none;
+}
+
+.highlight {
+  color: var(--orange);
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.about-hero {
+  background: var(--cream);
+  padding: 60px 6% 0;
+  position: relative;
+}
+
+.about-hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-hero-content {
+  max-width: 600px;
+  padding: 20px 0 40px;
+}
+
+.about-hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.about-hero-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 480px;
+}
+
+/* Hero Stats - exactly like screenshot */
+.about-hero-stats {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--navy-deep);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 32px 40px;
+  border-radius: 12px;
+  position: relative;
+  top: 30px;
+  box-shadow: 0 10px 40px rgba(8, 26, 61, 0.25);
+}
+
+.about-stat {
+  text-align: center;
+  color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0 20px;
+}
+
+.about-stat:last-child {
+  border-right: none;
+}
+
+.about-stat-value {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stat-suffix {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.about-stat-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================
+   OUR STORY SECTION
+========================================= */
+
+.about-story {
+  padding: 100px 6% 70px;
+  background: var(--white);
+}
+
+.about-story-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.about-badge {
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-badge.light {
+  color: var(--orange);
+}
+
+.about-story-left h2 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.about-story-left p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 14px;
+  max-width: 460px;
+}
+
+.about-story-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.25s ease;
+  margin-top: 4px;
+  background: transparent;
+}
+
+.about-story-btn:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+/* Story Cards - 4 column grid */
+.about-story-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about-story-card {
+  background: #fbfbfd;
+  border: 1px solid #eceef3;
+  border-radius: 12px;
+  padding: 28px 20px 24px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-story-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: var(--white);
+  border: 1px solid #e5e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  transition: 0.3s ease;
+}
+
+.about-story-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+
+.about-story-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+.about-story-line {
+  width: 26px;
+  height: 3px;
+  background: var(--orange);
+  margin: 0 auto;
+}
+
+/* =========================================
+   OUR IMPACT SECTION
+========================================= */
+
+.about-impact {
+  background: var(--navy-deep);
+  padding: 70px 6%;
+  position: relative;
+}
+
+.about-impact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-impact-left h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.about-impact-left h2 .highlight {
+  color: var(--orange);
+}
+
+.about-impact-right {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Ring Styles */
+.ring {
+  position: relative;
+  width: 148px;
+  height: 148px;
+  flex-shrink: 0;
+}
+
+.ring svg {
+  position: absolute;
+  inset: 0;
+}
+
+.ring-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.ring-icon {
+  color: var(--orange);
+  margin-bottom: 4px;
+}
+
+.ring-value {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ring-suffix {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.ring-label {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  margin-top: 2px;
+  max-width: 100px;
+}
+
+/* =========================================
+   OUR COMMITMENT SECTION
+========================================= */
+
+.about-commitment {
+  padding: 80px 6% 90px;
+  background: var(--cream);
+}
+
+.about-commitment-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-commitment-left h2 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.about-commitment-left h2 .highlight {
+  color: var(--orange);
+}
+
+.about-commitment-left p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 420px;
+  margin-bottom: 24px;
+}
+
+.about-commitment-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.about-commitment-btn:hover {
+  background: var(--orange);
+  color: var(--navy);
+}
+
+.about-commitment-right {
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.about-commitment-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .about-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .about-story-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-story-left p {
+    max-width: 100%;
+  }
+
+  .about-story-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-impact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-impact-right {
+    justify-content: center;
+  }
+
+  .about-commitment-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-commitment-left p {
+    max-width: 100%;
+  }
+
+  .about-commitment-right {
+    height: 280px;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 40px 5% 0;
+  }
+
+  .about-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .about-hero-content p {
+    font-size: 14px;
+  }
+
+  .about-hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 24px 20px;
+    top: 20px;
+  }
+
+  .about-stat {
+    border-right: none;
+    padding: 0;
+  }
+
+  .about-stat-value {
+    font-size: 24px;
+  }
+
+  .about-story {
+    padding: 60px 5% 50px;
+  }
+
+  .about-story-left h2 {
+    font-size: 28px;
+  }
+
+  .about-story-right {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .about-story-card {
+    padding: 20px 15px;
+  }
+
+  .about-impact {
+    padding: 50px 5%;
+  }
+
+  .about-impact-left h2 {
+    font-size: 26px;
+  }
+
+  .about-impact-right {
+    gap: 15px;
+  }
+
+  .ring {
+    width: 130px;
+    height: 130px;
+  }
+
+  .ring-value {
+    font-size: 18px;
+  }
+
+  .about-commitment {
+    padding: 60px 5% 70px;
+  }
+
+  .about-commitment-left h2 {
+    font-size: 28px;
+  }
+
+  .about-commitment-right {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-content h1 {
+    font-size: 26px;
+  }
+
+  .about-hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 18px 15px;
+  }
+
+  .about-stat-value {
+    font-size: 20px;
+  }
+
+  .about-stat-label {
+    font-size: 12px;
+  }
+
+  .about-story-right {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story-left h2 {
+    font-size: 24px;
+  }
+
+  .about-story-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-impact-left h2 {
+    font-size: 22px;
+  }
+
+  .about-impact-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ring {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-commitment-left h2 {
+    font-size: 24px;
+  }
+
+  .about-commitment-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .about-commitment-right {
+    height: 180px;
+  }
+}

@@ -46,7 +46,7 @@ const getSlidesToShow = (width) => {
   return match ? match.slidesToShow : DEFAULT_SLIDES_TO_SHOW;
 };
 
-const RecentProjects = () => {
+export default function RecentProjects () {
   const carouselRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
@@ -251,5 +251,3 @@ const RecentProjects = () => {
     </section>
   );
 };
-
-export default RecentProjects;

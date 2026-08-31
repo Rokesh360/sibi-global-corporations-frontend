@@ -64,7 +64,7 @@ const processSteps = [
   },
 ];
 
-const Manufacturing = () => {
+export default function Manufacturing () {
   return (
     <section className="manufacturing-section">
       <div className="manufacturing-bg"></div>
@@ -213,5 +213,3 @@ const Manufacturing = () => {
     </section>
   );
 };
-
-export default Manufacturing;

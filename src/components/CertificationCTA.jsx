@@ -16,7 +16,7 @@ const contacts = [
   ],
 ];
 
-const CertificationCTA = () => {
+export default function CertificationCTA () {
   return (
     <>
       <section className="cta-section">
@@ -130,5 +130,3 @@ const CertificationCTA = () => {
     </>
   );
 };
-
-export default CertificationCTA;

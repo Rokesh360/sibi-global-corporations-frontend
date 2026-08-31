@@ -1,18 +1,11 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
-import HeroBanner from "./components/HeroBanner";
-import AboutUs from "./components/AboutUs";
-import Solution from "./components/Solution";
 import Loader from "./components/Layout/Loader";
 import "./App.css";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Manufacturing from "./components/Manufacturing";
-import Industries from "./components/Industries";
-import RecentProjects from "./components/Recentprojects";
-import StatsSection from "./components/StatsSection";
-import HowWeWork from "./components/HowWeWork";
-import CertificationCTA from "./components/CertificationCTA";
+import AboutUs from "./components/AboutUs/AboutUs";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
@@ -21,16 +14,10 @@ function App() {
       <Header />
 
       <main>
-        <HeroBanner />
-        <AboutUs />
-        <Solution />
-        <WhyChooseUs />
-        <Manufacturing />
-        <StatsSection />
-        <Industries />
-        <RecentProjects /> 
-        <HowWeWork />
-        <CertificationCTA />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Routes>
       </main>
 
       <Footer />

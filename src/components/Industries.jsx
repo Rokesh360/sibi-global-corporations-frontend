@@ -68,7 +68,7 @@ const industries = [
    SECTION: Industries
 ========================================================= */
 
-const Industries = () => {
+export default function Industries () {
   return (
     <section className="industries-section">
       <div className="industries-container">
@@ -252,5 +252,3 @@ const Industries = () => {
     </section>
   );
 };
-
-export default Industries;

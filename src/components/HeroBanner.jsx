@@ -14,7 +14,7 @@ const SLIDE_IMAGES = [
 
 const AUTOPLAY_INTERVAL = 5000;
 
-export default function HeroBanner() {
+export default function HeroBanner () {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {

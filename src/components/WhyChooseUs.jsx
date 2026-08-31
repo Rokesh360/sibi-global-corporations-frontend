@@ -65,7 +65,7 @@ const featureVariants = {
   },
 };
 
-const WhyChooseUs = () => {
+export default function WhyChooseUs () {
   return (
     <section className="why-choose-section">
       {/* LEFT IMAGE */}
@@ -214,5 +214,3 @@ const WhyChooseUs = () => {
     </section>
   );
 };
-
-export default WhyChooseUs;

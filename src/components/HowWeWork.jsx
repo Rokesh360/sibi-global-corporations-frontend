@@ -48,7 +48,7 @@ const workSteps = [
    SECTION: How We Work
 ========================================================= */
 
-const HowWeWork = () => {
+export default function HowWeWork () {
   return (
     <section className="how-work-section">
       <div className="how-work-container">
@@ -217,5 +217,3 @@ const HowWeWork = () => {
     </section>
   );
 };
-
-export default HowWeWork;
