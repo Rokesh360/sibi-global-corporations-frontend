@@ -1783,7 +1783,7 @@ margin-left: 5px;
   inset: 0;
   z-index: 0;
 
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
 
@@ -3608,6 +3608,9 @@ margin-left: 5px;
   font-size: 32px;
 
   line-height: 45px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
