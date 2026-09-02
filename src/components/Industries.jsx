@@ -68,7 +68,7 @@ const industries = [
    SECTION: Industries
 ========================================================= */
 
-const Industries = () => {
+export default function Industries () {
   return (
     <section className="industries-section">
       <div className="industries-container">
@@ -128,7 +128,7 @@ const Industries = () => {
               delay: 0.15,
             }}
           >
-            Built for Diverse <span className="yellow_text_highlight">Industrial Requirements</span>
+            Built for Diverse <div className="yellow_text_highlight">Industrial Requirements</div>
           </motion.h2>
 
           <motion.div
@@ -252,5 +252,3 @@ const Industries = () => {
     </section>
   );
 };
-
-export default Industries;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-const StatsSection = () => {
+export default function StatsSection () {
   const [counts, setCounts] = useState({
     projects: 0,
     experience: 0,
@@ -278,5 +278,3 @@ const StatsSection = () => {
     </section>
   );
 };
-
-export default StatsSection;

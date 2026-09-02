@@ -11,7 +11,7 @@ const features = [
   { icon: "👤", title: "Client Satisfaction" },
 ];
 
-const AboutUs = () => {
+export default function AboutUs () {
   // Animation variants
   const containerVariants = {
     hidden: {},
@@ -208,5 +208,3 @@ const AboutUs = () => {
     </section>
   );
 };
-
-export default AboutUs;

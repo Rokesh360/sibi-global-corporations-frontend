@@ -65,7 +65,7 @@ const featureVariants = {
   },
 };
 
-const WhyChooseUs = () => {
+export default function WhyChooseUs () {
   return (
     <section className="why-choose-section">
       {/* LEFT IMAGE */}
@@ -154,7 +154,7 @@ const WhyChooseUs = () => {
               ease: "easeOut",
             }}
           >
-            Building <span className="yellow_text_highlight">Stronger Foundations</span>
+            Building <div className="yellow_text_highlight">Stronger Foundations</div>
             <br />
             for Your Business
           </motion.h2>
@@ -214,5 +214,3 @@ const WhyChooseUs = () => {
     </section>
   );
 };
-
-export default WhyChooseUs;

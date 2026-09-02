@@ -8,7 +8,7 @@ import SteelErection from "../../public/assets/img/solution/steel-erection.jpg";
 import MezzanineFloors from "../../public/assets/img/solution/mezzanine-floor.jpg";
 import TurnkeySolutions from "../../public/assets/img/solution/turnkey-solutions.jpg";
 
-const solutions = [
+const Solution = [
   {
     number: "01",
     title: "Pre-Engineered Buildings",
@@ -71,7 +71,7 @@ const solutions = [
   },
 ];
 
-const Solutions = () => {
+export default function Solutions () {
   return (
     <section className="solutions-section">
 
@@ -126,7 +126,7 @@ const Solutions = () => {
 
         {/* ================= SOLUTION GRID ================= */}
         <div className="solutions-grid">
-          {solutions.map((item, index) => (
+          {Solution.map((item, index) => (
             <motion.div
               className={`solution-card ${item.theme}`}
               key={item.number}
@@ -250,5 +250,3 @@ const Solutions = () => {
     </section>
   );
 };
-
-export default Solutions;

@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../../public/assets/logo/sibi-global-corporations.png";
+import FloatingActions from "../FloatingActions";
+import AIChatbot from "../AIChatbot";
 
 const navItems = [
   {
@@ -35,7 +37,7 @@ const navItems = [
   // =========================================
   {
     label: "Solutions",
-    path: "/solutions",
+    path: "/our-solutions",
     dropdown: [
       {
         label: "Pre-Engineered Buildings",
@@ -177,220 +179,222 @@ export default function Header() {
   };
 
   return (
-    <header
-      className="main-header"
-      ref={menuRef}
-    >
-      <div className="header-container">
+    <>
 
-        {/* =====================================
+      <header
+        className="main-header"
+        ref={menuRef}
+      >
+        <div className="header-container">
+
+          {/* =====================================
             LOGO
         ===================================== */}
 
-        <Link
-          to="/"
-          className="logo"
-          onClick={closeMenu}
-        >
-          <img
-            src={logo}
-            alt="SIBI Global Corporation"
-          />
-        </Link>
+          <Link
+            to="/"
+            className="logo"
+            onClick={closeMenu}
+          >
+            <img
+              src={logo}
+              alt="SIBI Global Corporation"
+            />
+          </Link>
 
-        {/* =====================================
+          {/* =====================================
             MOBILE MENU CHECKBOX
         ===================================== */}
 
-        <input
-          type="checkbox"
-          id="menu-toggle"
-          checked={menuOpen}
-          onChange={(e) => {
-            setMenuOpen(e.target.checked);
+          <input
+            type="checkbox"
+            id="menu-toggle"
+            checked={menuOpen}
+            onChange={(e) => {
+              setMenuOpen(e.target.checked);
 
-            if (!e.target.checked) {
-              setActiveDropdown(null);
-            }
-          }}
-        />
+              if (!e.target.checked) {
+                setActiveDropdown(null);
+              }
+            }}
+          />
 
-        {/* =====================================
+          {/* =====================================
             MOBILE HAMBURGER
         ===================================== */}
 
-        <label
-          htmlFor="menu-toggle"
-          className="menu-icon"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
+          <label
+            htmlFor="menu-toggle"
+            className="menu-icon"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
 
-        {/* =====================================
+          {/* =====================================
             NAVIGATION
         ===================================== */}
 
-        <nav
-          className={`main-nav ${
-            menuOpen ? "nav-open" : ""
-          }`}
-        >
+          <nav
+            className={`main-nav ${menuOpen ? "nav-open" : ""
+              }`}
+          >
 
-          {navItems.map((item) => {
+            {navItems.map((item) => {
 
-            {/* =================================
+              {/* =================================
                 ITEMS WITH DROPDOWN
             ================================= */}
 
-            if (item.dropdown) {
-              const dropdownOpen =
-                activeDropdown === item.label;
+              if (item.dropdown) {
+                const dropdownOpen =
+                  activeDropdown === item.label;
 
-              return (
-                <div
-                  key={item.label}
-                  className={`nav-dropdown ${
-                    dropdownOpen ? "dropdown-active" : ""
-                  }`}
-                  onMouseEnter={() => {
-                    if (window.innerWidth > 991) {
-                      setActiveDropdown(item.label);
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (window.innerWidth > 991) {
-                      setActiveDropdown(null);
-                    }
-                  }}
-                >
+                return (
+                  <div
+                    key={item.label}
+                    className={`nav-dropdown ${dropdownOpen ? "dropdown-active" : ""
+                      }`}
+                    onMouseEnter={() => {
+                      if (window.innerWidth > 991) {
+                        setActiveDropdown(item.label);
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      if (window.innerWidth > 991) {
+                        setActiveDropdown(null);
+                      }
+                    }}
+                  >
 
-                  {/* =========================
+                    {/* =========================
                       MENU TITLE
                   ========================= */}
 
-                  <div className="dropdown-title-wrapper">
+                    <div className="dropdown-title-wrapper">
 
-                    <Link
-                      to={item.path}
-                      className={
-                        isDropdownActive(item)
-                          ? "active"
-                          : ""
-                      }
-                      onClick={(e) => {
-
-                        // On mobile, clicking parent opens dropdown
-                        // instead of immediately navigating
-                        if (window.innerWidth <= 991) {
-                          e.preventDefault();
-                          toggleDropdown(item.label);
-                        }
-                      }}
-                    >
-                      {item.label}
-                    </Link>
-
-                    {/* DROPDOWN ARROW */}
-
-                    <button
-                      type="button"
-                      className="dropdown-arrow"
-                      onClick={() =>
-                        toggleDropdown(item.label)
-                      }
-                      aria-label={`Open ${item.label} menu`}
-                      aria-expanded={dropdownOpen}
-                    >
-                      <span
+                      <Link
+                        to={item.path}
                         className={
-                          dropdownOpen
-                            ? "arrow-up"
+                          isDropdownActive(item)
+                            ? "active"
                             : ""
                         }
+                        onClick={(e) => {
+
+                          // On mobile, clicking parent opens dropdown
+                          // instead of immediately navigating
+                          if (window.innerWidth <= 991) {
+                            e.preventDefault();
+                            toggleDropdown(item.label);
+                          }
+                        }}
                       >
-                        ⌄
-                      </span>
-                    </button>
+                        {item.label}
+                      </Link>
 
-                  </div>
+                      {/* DROPDOWN ARROW */}
 
-                  {/* =========================
+                      <button
+                        type="button"
+                        className="dropdown-arrow"
+                        onClick={() =>
+                          toggleDropdown(item.label)
+                        }
+                        aria-label={`Open ${item.label} menu`}
+                        aria-expanded={dropdownOpen}
+                      >
+                        <span
+                          className={
+                            dropdownOpen
+                              ? "arrow-up"
+                              : ""
+                          }
+                        >
+                          ⌄
+                        </span>
+                      </button>
+
+                    </div>
+
+                    {/* =========================
                       DROPDOWN MENU
                   ========================= */}
 
-                  <div
-                    className={`header-dropdown-menu ${
-                      dropdownOpen
-                        ? "dropdown-open"
-                        : ""
-                    } ${
-                      item.label === "Solutions"
-                        ? "solutions-dropdown"
-                        : "about-dropdown"
-                    }`}
-                  >
+                    <div
+                      className={`header-dropdown-menu ${dropdownOpen
+                          ? "dropdown-open"
+                          : ""
+                        } ${item.label === "Solutions"
+                          ? "solutions-dropdown"
+                          : "about-dropdown"
+                        }`}
+                    >
 
-                    {item.dropdown.map(
-                      (dropdownItem) => (
-                        <Link
-                          key={dropdownItem.label}
-                          to={dropdownItem.path}
-                          className={
-                            pathname ===
-                            dropdownItem.path
-                              ? "active"
-                              : ""
-                          }
-                          onClick={closeMenu}
-                        >
-                          {dropdownItem.label}
-                        </Link>
-                      )
-                    )}
+                      {item.dropdown.map(
+                        (dropdownItem) => (
+                          <Link
+                            key={dropdownItem.label}
+                            to={dropdownItem.path}
+                            className={
+                              pathname ===
+                                dropdownItem.path
+                                ? "active"
+                                : ""
+                            }
+                            onClick={closeMenu}
+                          >
+                            {dropdownItem.label}
+                          </Link>
+                        )
+                      )}
 
+                    </div>
                   </div>
-                </div>
-              );
-            }
+                );
+              }
 
-            {/* =================================
+              {/* =================================
                 NORMAL MENU ITEM
             ================================= */}
 
-            return (
-              <Link
-                key={item.label}
-                to={item.path}
-                className={
-                  pathname === item.path
-                    ? "active"
-                    : ""
-                }
-                onClick={closeMenu}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+              return (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  className={
+                    pathname === item.path
+                      ? "active"
+                      : ""
+                  }
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
 
-          {/* =====================================
+            {/* =====================================
               GET PROJECT QUOTE
           ===================================== */}
 
-          <Link
-            to="/contact"
-            className="quote-btn"
-            onClick={closeMenu}
-          >
-            <span>Get Project Quote</span>
-            <span className="quote-arrow">→</span>
-          </Link>
+            <Link
+              to="/contact"
+              className="quote-btn"
+              onClick={closeMenu}
+            >
+              <span>Get Project Quote</span>
+              <span className="quote-arrow">→</span>
+            </Link>
 
-        </nav>
-      </div>
-    </header>
+          </nav>
+        </div>
+      </header>
+
+      <FloatingActions />
+      <AIChatbot />
+    </>
   );
 }

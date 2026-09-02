@@ -48,7 +48,7 @@ const workSteps = [
    SECTION: How We Work
 ========================================================= */
 
-const HowWeWork = () => {
+export default function HowWeWork () {
   return (
     <section className="how-work-section">
       <div className="how-work-container">
@@ -109,7 +109,7 @@ const HowWeWork = () => {
               delay: 0.1,
             }}
           >
-            From <span className="yellow_text_highlight">Requirement to</span> Completion
+            From <div className="yellow_text_highlight">Requirement to</div> Completion
           </motion.h2>
 
           <motion.div
@@ -217,5 +217,3 @@ const HowWeWork = () => {
     </section>
   );
 };
-
-export default HowWeWork;
