@@ -27,7 +27,7 @@ const navItems = [
       },
       {
         label: "Quality & Safety",
-        path: "/quality-safety",
+        path: "/quality-and-safety",
       },
     ],
   },

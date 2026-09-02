@@ -109,7 +109,7 @@ export default function HowWeWork () {
               delay: 0.1,
             }}
           >
-            From <div className="yellow_text_highlight">Requirement to</div> Completion
+            From <div className="yellow_text_highlight"> Requirement to </div> Completion
           </motion.h2>
 
           <motion.div

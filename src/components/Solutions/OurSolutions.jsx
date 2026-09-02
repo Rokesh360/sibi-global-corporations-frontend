@@ -29,13 +29,13 @@ import {
     Layers,
     Zap,
 } from "lucide-react";
-import SolutionImg from "../../public/assets/img/solutions-banner.png";
-import Solution1 from "../../public/assets/img/solution/peb-building.jpg";
-import Solution2 from "../../public/assets/img/solution/steel-fabrication.jpg";
-import Solution3 from "../../public/assets/img/solution/industrial-shed.jpg";
-import Solution4 from "../../public/assets/img/solution/mezzanine-floor.jpg";
-import Solution5 from "../../public/assets/img/solution/steel-erection.jpg";
-import Solution6 from "../../public/assets/img/solution/turnkey-solutions.jpg";
+import SolutionImg from "../../../public/assets/img/solutions-banner.png";
+import Solution1 from "../../../public/assets/img/solution/peb-building.jpg";
+import Solution2 from "../../../public/assets/img/solution/steel-fabrication.jpg";
+import Solution3 from "../../../public/assets/img/solution/industrial-shed.jpg";
+import Solution4 from "../../../public/assets/img/solution/mezzanine-floor.jpg";
+import Solution5 from "../../../public/assets/img/solution/steel-erection.jpg";
+import Solution6 from "../../../public/assets/img/solution/turnkey-solutions.jpg";
 
 /* ---------------------------------------------------------
    DATA
