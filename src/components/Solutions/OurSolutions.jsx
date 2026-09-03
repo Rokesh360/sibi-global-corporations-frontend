@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
     ArrowRight,
     Building2,
@@ -51,6 +52,7 @@ const HERO_STATS = [
 const SOLUTIONS = [
     {
         number: "01",
+        slug: "pre-engineered-buildings",
         title: "Pre-Engineered Buildings",
         description:
             "Efficiently engineered steel building solutions designed for factories, warehouses, manufacturing facilities and industrial applications.",
@@ -60,6 +62,7 @@ const SOLUTIONS = [
     },
     {
         number: "02",
+        slug: "structural-steel-fabrication",
         title: "Structural Steel Fabrication",
         description:
             "Precision-fabricated structural steel components manufactured according to project-specific engineering and fabrication requirements.",
@@ -69,6 +72,7 @@ const SOLUTIONS = [
     },
     {
         number: "03",
+        slug: "industrial-shed-construction",
         title: "Industrial Shed Construction",
         description:
             "Customised industrial shed solutions designed to provide practical, durable and efficient spaces for manufacturing, storage and operations.",
@@ -78,6 +82,7 @@ const SOLUTIONS = [
     },
     {
         number: "04",
+        slug: "mezzanine-floors",
         title: "Mezzanine Floors",
         description:
             "Steel mezzanine structures that help businesses maximise available vertical space and create additional usable floor areas within existing facilities.",
@@ -87,6 +92,7 @@ const SOLUTIONS = [
     },
     {
         number: "05",
+        slug: "steel-erection",
         title: "Steel Erection",
         description:
             "Safe and systematic structural steel erection supported by experienced site teams and planned execution methodologies.",
@@ -96,6 +102,7 @@ const SOLUTIONS = [
     },
     {
         number: "06",
+        slug: "turnkey-industrial-solutions",
         title: "Turnkey Industrial Solutions",
         description:
             "Integrated project execution covering engineering, fabrication, transportation, erection and associated structural requirements.",
@@ -152,6 +159,7 @@ const staggerContainer = {
 --------------------------------------------------------- */
 
 export default function OurSolutions() {
+    const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState(0);
     const [formData, setFormData] = useState({
         name: "",
@@ -171,6 +179,14 @@ export default function OurSolutions() {
         e.preventDefault();
         console.log("Form submitted:", formData);
         // Add your form submission logic here
+    };
+
+    const handleExplore = (slug) => {
+        navigate(`/solutions/details/${slug}`);
+        // Scroll to top
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
     };
 
     return (
@@ -435,7 +451,7 @@ export default function OurSolutions() {
                                     </motion.p>
 
                                     <motion.a
-                                        href="#"
+                                        className="solution-explore-btn"
                                         initial={{ opacity: 0, y: 10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
@@ -444,6 +460,8 @@ export default function OurSolutions() {
                                             delay: index * 0.12 + 0.4,
                                         }}
                                         whileHover={{ x: 6 }}
+                                        onClick={() => handleExplore(item.slug)}
+                                        style={{ cursor: "pointer" }}
                                     >
                                         {item.link}
                                         <motion.span

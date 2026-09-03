@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import PreEngineering from "../../public/assets/img/solution/peb-building.jpg";
 import SteelFabrication from "../../public/assets/img/solution/steel-fabrication.jpg";
@@ -11,6 +12,7 @@ import TurnkeySolutions from "../../public/assets/img/solution/turnkey-solutions
 const Solution = [
   {
     number: "01",
+    slug: "pre-engineered-buildings",
     title: "Pre-Engineered Buildings",
     description:
       "Efficiently engineered steel building solutions designed for factories, warehouses, manufacturing facilities and industrial applications.",
@@ -21,6 +23,7 @@ const Solution = [
   },
   {
     number: "02",
+    slug: "structural-steel-fabrication",
     title: "Structural Steel Fabrication",
     description:
       "Precision-fabricated structural steel components manufactured according to project-specific engineering and fabrication requirements.",
@@ -31,6 +34,7 @@ const Solution = [
   },
   {
     number: "03",
+    slug: "industrial-shed-construction",
     title: "Industrial Shed Construction",
     description:
       "Customised industrial shed solutions designed to provide practical, durable and efficient spaces for manufacturing, storage and operations.",
@@ -41,6 +45,7 @@ const Solution = [
   },
   {
     number: "04",
+    slug: "mezzanine-floors",
     title: "Mezzanine Floors",
     description:
       "Steel mezzanine structures that help businesses maximise available vertical space and create additional usable floor areas within existing facilities.",
@@ -51,6 +56,7 @@ const Solution = [
   },
   {
     number: "05",
+    slug: "steel-erection",
     title: "Steel Erection",
     description:
       "Safe and systematic structural steel erection supported by experienced site teams and planned execution methodologies.",
@@ -61,6 +67,7 @@ const Solution = [
   },
   {
     number: "06",
+    slug: "turnkey-industrial-solutions",
     title: "Turnkey Industrial Solutions",
     description:
       "Integrated project execution covering engineering, fabrication, transportation, erection and associated structural requirements.",
@@ -71,10 +78,19 @@ const Solution = [
   },
 ];
 
-export default function Solutions () {
+export default function Solutions() {
+  const navigate = useNavigate();
+
+  const handleExplore = (slug) => {
+    navigate(`/solutions/details/${slug}`);
+    // Scroll to top
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
   return (
     <section className="solutions-section">
-
       {/* Decorative Elements */}
       <motion.div
         className="solutions-dots dots-left"
@@ -93,7 +109,6 @@ export default function Solutions () {
       />
 
       <div className="solutions-container">
-
         {/* ================= HEADER ================= */}
         <motion.div
           className="solutions-header"
@@ -223,7 +238,7 @@ export default function Solutions () {
                 </motion.p>
 
                 <motion.a
-                  href="#"
+                  className="solution-explore-btn"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -232,6 +247,8 @@ export default function Solutions () {
                     delay: index * 0.12 + 0.4,
                   }}
                   whileHover={{ x: 6 }}
+                  onClick={() => handleExplore(item.slug)}
+                  style={{ cursor: "pointer" }}
                 >
                   {item.link}
                   <motion.span
@@ -245,8 +262,7 @@ export default function Solutions () {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
-};
+}

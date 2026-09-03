@@ -5,6 +5,8 @@ import banner2Img from "../../public/assets/img/banner-2.png";
 import banner3Img from "../../public/assets/img/banner-3.png";
 import mobileBanner2Img from "../../public/assets/img/mobile_banner_2.png";
 import mobileBanner3Img from "../../public/assets/img/mobile_banner_3.png";
+import QuoteModal from "./Modal/QuoteModal";
+
 
 const SLIDE_IMAGES = [
   { desktop: steelBuildingImg, mobile: steelBuildingImg },
@@ -16,6 +18,7 @@ const AUTOPLAY_INTERVAL = 5000;
 
 export default function HeroBanner () {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -26,6 +29,16 @@ export default function HeroBanner () {
   }, []);
 
   const showContent = activeIndex === 0;
+
+  const openQuoteModal = () => {
+    setQuoteModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeQuoteModal = () => {
+    setQuoteModalOpen(false);
+    document.body.style.overflow = "auto";
+  };
 
   return (
     <section className={`hero-section ${showContent ? "first-slide" : ""}`}>
@@ -63,7 +76,7 @@ export default function HeroBanner () {
           </p>
 
           <div className="hero-buttons">
-            <Link to="/contact" className="primary-btn">
+            <Link onClick={openQuoteModal} className="primary-btn">
               Get Project Quote
               <span>→</span>
             </Link>
@@ -87,6 +100,8 @@ export default function HeroBanner () {
           />
         ))}
       </div>
+
+      <QuoteModal isOpen={quoteModalOpen} onClose={closeQuoteModal} />
     </section>
   );
 }

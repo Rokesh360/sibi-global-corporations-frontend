@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import FooterBg from "../../../public/assets/img/footer-bg.png";
 
 export default function Footer() {
@@ -29,15 +30,15 @@ export default function Footer() {
 
             
             <div className="links-grid">
-              <a href="#">About Us</a>
-              <a href="#">Solutions</a>
-              <a href="#">Projects</a>
-              <a href="#">Manufacturing</a>  
-              <a href="#">Industries</a>
-              <a href="#">Blog</a>
-              <a href="#">Career</a>
-              <a href="#">Contact Us</a>
-              <a href="#">Quality</a>
+              <Link to="/about-us">About Us</Link>
+              <Link to="/our-solutions">Solutions</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="#">Manufacturing</Link>  
+              <Link to="/industries">Industries</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="#">Career</Link>
+              <Link to="#">Contact Us</Link>
+              <Link to="#">Quality</Link>
             </div>
           </div>
 

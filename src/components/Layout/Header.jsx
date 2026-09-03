@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../../public/assets/logo/sibi-global-corporations.png";
 import FloatingActions from "../FloatingActions";
 import AIChatbot from "../AIChatbot";
+import QuoteModal from "../Modal/QuoteModal";
 
 const navItems = [
   {
@@ -103,6 +104,9 @@ export default function Header() {
   // Stores which dropdown is currently open
   const [activeDropdown, setActiveDropdown] = useState(null);
 
+  // Controls the "Get Project Quote" popup form
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
+
   const { pathname } = useLocation();
 
   const menuRef = useRef(null);
@@ -158,6 +162,21 @@ export default function Header() {
   const closeMenu = () => {
     setMenuOpen(false);
     setActiveDropdown(null);
+  };
+
+  // =========================================
+  // QUOTE MODAL OPEN / CLOSE
+  // =========================================
+
+  const openQuoteModal = () => {
+    closeMenu();
+    setQuoteModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeQuoteModal = () => {
+    setQuoteModalOpen(false);
+    document.body.style.overflow = "auto";
   };
 
   // =========================================
@@ -378,12 +397,13 @@ export default function Header() {
 
             {/* =====================================
               GET PROJECT QUOTE
+              Now opens the QuoteModal popup instead
+              of navigating to /contact
           ===================================== */}
 
             <Link
-              to="/contact"
               className="quote-btn"
-              onClick={closeMenu}
+              onClick={openQuoteModal}
             >
               <span>Get Project Quote</span>
               <span className="quote-arrow">→</span>
@@ -392,6 +412,11 @@ export default function Header() {
           </nav>
         </div>
       </header>
+
+      <QuoteModal
+        isOpen={quoteModalOpen}
+        onClose={closeQuoteModal}
+      />
 
       <FloatingActions />
       <AIChatbot />
