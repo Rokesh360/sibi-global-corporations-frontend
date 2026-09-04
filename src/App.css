@@ -1220,9 +1220,9 @@ button {
   background:
     radial-gradient(
       circle at center,
-      #0d3155 0%,
-      #061b33 45%,
-      #020d19 100%
+      #fff8df 0%,
+      #fbe9b5 52%,
+      #f2d27a 100%
     );
 }
 
@@ -1272,10 +1272,25 @@ button {
 .sgc-loader-spinner {
   position: relative;
 
-  width: 48px;
-  height: 48px;
+  width: 140px;
+  height: 140px;
 
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+}
+
+.sgc-loader-spinner img {
+  position: absolute;
+  inset: 50%;
+  z-index: 1;
+
+  width: 82px;
+  height: 82px;
+
+  object-fit: contain;
+  /* border-radius: 50%; */
+  transform: translate(-50%, -50%);
 }
 
 .sgc-loader-spinner::before,
@@ -1290,7 +1305,7 @@ button {
 }
 
 .sgc-loader-spinner::before {
-  border: 3px solid rgba(255, 255, 255, 0.15);
+  border: 3px solid rgba(6, 27, 51, 0.16);
 
   border-top-color: var(--sgc-gold);
 
@@ -1313,7 +1328,7 @@ button {
 .sgc-loader p {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--sgc-navy);
 
   font-size: 11px;
 

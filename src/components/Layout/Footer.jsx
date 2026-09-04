@@ -33,12 +33,12 @@ export default function Footer() {
               <Link to="/about-us">About Us</Link>
               <Link to="/our-solutions">Solutions</Link>
               <Link to="/projects">Projects</Link>
-              <Link to="#">Manufacturing</Link>  
+              <Link to="/manufacturing">Manufacturing</Link>
               <Link to="/industries">Industries</Link>
               <Link to="/blog">Blog</Link>
               <Link to="#">Career</Link>
-              <Link to="#">Contact Us</Link>
-              <Link to="#">Quality</Link>
+              <Link to="/contact">Contact Us</Link>
+              <Link to="/quality-and-safety">Quality</Link>
             </div>
           </div>
 

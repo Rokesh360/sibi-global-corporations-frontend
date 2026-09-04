@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import Loader from "./components/Layout/Loader";
@@ -18,11 +18,20 @@ import IndustrySolutions from "./components/IndustrySolutions/IndustrySolutions"
 import Engineering from "./components/Engineering/Engineering";
 import Manufacturing from "./components/Manufacturing/Manufacturing";
 import Contact from "./components/Contact/Contact";
+import Technology from "./components/Technology/Technology";
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname]);
+
   return (
     <>
-      <Loader />
+      <Loader key={pathname} />
       <Header />
 
       <main className="mt-90">
@@ -41,6 +50,7 @@ function App() {
           <Route path="/engineering" element={<Engineering />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/technology" element={<Technology />} />
         </Routes>
       </main>
 

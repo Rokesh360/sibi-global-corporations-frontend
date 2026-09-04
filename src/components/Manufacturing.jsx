@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const processSteps = [
   {
@@ -117,32 +118,28 @@ export default function Manufacturing () {
             structural components.
           </motion.p>
 
-          <motion.a
-            href="#"
-            className="manufacturing-btn"
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.7,
-              delay: 0.3,
-            }}
-            whileHover={{
-              scale: 1.03,
-            }}
-            whileTap={{
-              scale: 0.97,
-            }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Explore Our Manufacturing Capabilities
-
-            <motion.span
-              whileHover={{ x: 6 }}
-              transition={{ duration: 0.2 }}
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
             >
-              →
-            </motion.span>
-          </motion.a>
+              <Link to="/manufacturing" className="manufacturing-btn">
+                Explore Our Manufacturing Capabilities
+
+                <motion.span
+                  whileHover={{ x: 7 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  →
+                </motion.span>
+              </Link>
+            </motion.div>
+          </motion.div>
         </motion.div>
 
         {/* RIGHT PROCESS AREA */}
