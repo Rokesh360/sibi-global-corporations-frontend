@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import QuoteModal from "./Modal/QuoteModal";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 35 },
@@ -17,6 +18,16 @@ const contacts = [
 ];
 
 export default function CertificationCTA () {
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
+  const openQuoteModal = () => {
+    setQuoteModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeQuoteModal = () => {
+    setQuoteModalOpen(false);
+    document.body.style.overflow = "auto";
+  };
   return (
     <>
       <section className="cta-section">
@@ -79,8 +90,9 @@ export default function CertificationCTA () {
             </motion.p>
 
             <motion.a
-              href="#"
+              onClick={openQuoteModal}
               className="contact_quote-btn"
+              style={{ cursor: "pointer" }}
               variants={fadeUp}
               initial="hidden"
               whileInView="show"
@@ -94,6 +106,8 @@ export default function CertificationCTA () {
             </motion.a>
           </div>
         </motion.div>
+
+        <QuoteModal isOpen={quoteModalOpen} onClose={closeQuoteModal} />
 
         {/* Contact Details */}
         <div className="contact-details">

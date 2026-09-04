@@ -15,6 +15,9 @@ import Projects from "./components/Projects/Projects";
 import ProjectDetails from "./components/Projects/Details/ProjectDetails";
 import SolutionDetails from "./components/Solutions/Details/SolutionDetails";
 import IndustrySolutions from "./components/IndustrySolutions/IndustrySolutions";
+import Engineering from "./components/Engineering/Engineering";
+import Manufacturing from "./components/Manufacturing/Manufacturing";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -22,7 +25,7 @@ function App() {
       <Loader />
       <Header />
 
-      <main>
+      <main className="mt-90">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUs />} />
@@ -35,6 +38,9 @@ function App() {
           <Route path="/projects/details/:slug" element={<ProjectDetails />} />
           <Route path="/solutions/details/:slug" element={<SolutionDetails />} />
           <Route path="/industries" element={<IndustrySolutions />} />
+          <Route path="/engineering" element={<Engineering />} />
+          <Route path="/manufacturing" element={<Manufacturing />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 

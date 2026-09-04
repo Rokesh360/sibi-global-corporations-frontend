@@ -2,10 +2,10 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel } from "antd";
 import { motion } from "framer-motion";
-
 import ProjectWarehouseImg from "../../public/assets/img/project-warehouse.jpg";
 import ProjectManufacturingImg from "../../public/assets/img/project-manufacturing.jpg";
 import ProjectLogisticsImg from "../../public/assets/img/project-logistics.jpg";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -46,7 +46,7 @@ const getSlidesToShow = (width) => {
   return match ? match.slidesToShow : DEFAULT_SLIDES_TO_SHOW;
 };
 
-export default function RecentProjects () {
+export default function RecentProjects() {
   const carouselRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
@@ -156,21 +156,28 @@ export default function RecentProjects () {
             by SIBI Global Corporation.
           </motion.p>
 
-          <motion.a
-            href="#"
-            className="yellow-btn"
+          <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
           >
-            View All Projects
-            <motion.span whileHover={{ x: 7 }} transition={{ duration: 0.2 }}>
-              →
-            </motion.span>
-          </motion.a>
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <Link to="/projects" className="yellow-btn">
+                View All Projects
+
+                <motion.span
+                  whileHover={{ x: 7 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  →
+                </motion.span>
+              </Link>
+            </motion.div>
+          </motion.div>
         </motion.div>
 
         {/* PROJECT SLIDER */}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import AboutBuilding from "../../public/assets/img/about-building.png";
 import AboutWelding from "../../public/assets/img/about-welding.png";
+import { Link } from "react-router-dom";
 
 const features = [
   { icon: "⚙", title: "Engineering Expertise" },
@@ -11,7 +12,7 @@ const features = [
   { icon: "👤", title: "Client Satisfaction" },
 ];
 
-export default function AboutUs () {
+export default function AboutUs() {
   // Animation variants
   const containerVariants = {
     hidden: {},
@@ -153,19 +154,17 @@ export default function AboutUs () {
             functional and efficient industrial infrastructure.
           </motion.p>
 
-          <motion.a
-            href="/about-us"
-            className="about-btn"
-            variants={fadeUp}
-            whileHover={{
-              x: 8,
-            }}
-            whileTap={{
-              scale: 0.97,
-            }}
+          <motion.div
+            whileHover={{ x: 8 }}
+            whileTap={{ scale: 0.97 }}
           >
-            Discover Sibi Global →
-          </motion.a>
+            <Link
+              to="/about-us"
+              className="about-btn"
+            >
+              Discover Sibi Global →
+            </Link>
+          </motion.div>
         </motion.div>
 
         {/* FEATURE BOX */}
