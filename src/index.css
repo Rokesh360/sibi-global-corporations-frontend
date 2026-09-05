@@ -8432,7 +8432,7 @@ display: none !important;
 .why-choose-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6));
+  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0));
   z-index: 1;
 }
 
@@ -9756,7 +9756,7 @@ display: none !important;
 .process-page-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6));
+  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0));
   z-index: 1;
 }
 
@@ -10564,7 +10564,7 @@ display: none !important;
 .quality-page-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6));
+  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0));
   z-index: 1;
 }
 
@@ -11427,7 +11427,7 @@ display: none !important;
 .blog-page-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6)); */
+  /* background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0)); */
   z-index: 1;
 }
 
@@ -12495,7 +12495,7 @@ display: none !important;
 .projects-page-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6)); */
+  /* background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0)); */
   z-index: 1;
 }
 
@@ -13556,7 +13556,7 @@ display: none !important;
 .project-details-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6));
+  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0));
   z-index: 1;
 }
 
@@ -14548,7 +14548,7 @@ display: none !important;
 .solution-details-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6));
+  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0));
   z-index: 1;
 }
 
@@ -15397,7 +15397,7 @@ display: none !important;
 .sibi-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6));
+  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0));
   z-index: 1;
 }
  
@@ -16677,7 +16677,7 @@ display: none !important;
 .engineering-page-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6)); */
+  /* background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0)); */
   z-index: 1;
 }
 
@@ -17519,7 +17519,7 @@ display: none !important;
 .manufacturing-page-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6)); */
+  /* background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0)); */
   z-index: 1;
 }
 
@@ -20419,7 +20419,7 @@ display: none !important;
 .technology-page-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0.6));
+  background: linear-gradient(135deg, rgba(11, 35, 80, 0.92), rgba(11, 35, 80, 0));
   z-index: 1;
 }
 
