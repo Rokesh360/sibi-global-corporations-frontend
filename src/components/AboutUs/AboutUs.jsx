@@ -10,9 +10,18 @@ import {
   ShieldCheck,
   Truck,
   HeartHandshake,
+  PencilRuler,
+  Construction,
+  HardHat,
+  Target,
+  Eye,
+  Award,
+  Handshake,
+  Flag,
 } from "lucide-react";
 import aboutImg from "../../../public/assets/img/about-banner.png";
 import commitmentImg from "../../../public/assets/img/commitment.jpg";
+import missionVisionImg from "../../../public/assets/img/mission-vision.png";
 
 const HERO_STATS = [
   {
@@ -38,6 +47,48 @@ const HERO_STATS = [
     value: 20,
     suffix: "+",
     label: "Industries Served",
+  },
+];
+
+const PROCESS_STEPS = [
+  { number: "01", icon: PencilRuler, label: "Engineering" },
+  { number: "02", icon: Factory, label: "Fabrication" },
+  { number: "03", icon: ShieldCheck, label: "Quality Control" },
+  { number: "04", icon: Construction, label: "Site Execution" },
+  { number: "05", icon: HardHat, label: "Steel Erection" },
+  { number: "06", icon: Building2, label: "Completion" },
+];
+
+const VALUES = [
+  {
+    icon: Handshake,
+    title: "Integrity",
+    body: "We believe in transparent communication and responsible execution.",
+    tone: "orange",
+  },
+  {
+    icon: Award,
+    title: "Quality",
+    body: "We focus on quality throughout the project lifecycle.",
+    tone: "navy",
+  },
+  {
+    icon: Settings,
+    title: "Engineering",
+    body: "We solve structural requirements through practical engineering.",
+    tone: "orange",
+  },
+  {
+    icon: HardHat,
+    title: "Safety",
+    body: "We prioritise safe working practices across our operations.",
+    tone: "navy",
+  },
+  {
+    icon: Flag,
+    title: "Commitment",
+    body: "We remain focused on delivering what we commit to our clients.",
+    tone: "orange",
   },
 ];
 
@@ -661,6 +712,163 @@ export default function AboutUs() {
             />
           </motion.div>
         </div>
+      </section>
+
+      {/* PROCESS TIMELINE */}
+      <section className="about-process">
+        <motion.div
+          className="process-title"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <span className="process-title-line" />
+          <h2>From Engineering to Execution</h2>
+          <span className="process-title-line" />
+        </motion.div>
+
+        <motion.p
+          className="process-subtitle"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          We work across the project lifecycle to deliver structural
+          solutions designed around each project's specific requirements.
+        </motion.p>
+
+        <motion.div
+          className="process-track"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {PROCESS_STEPS.map((step, index) => (
+            <React.Fragment key={step.label}>
+              <motion.div className="process-step" variants={fadeInUp}>
+                <motion.div
+                  className="process-hex"
+                  whileHover={{
+                    borderColor: "#f2a022",
+                    color: "#f2a022",
+                    transition: { duration: 0.3 },
+                  }}
+                >
+                  <step.icon size={30} />
+                </motion.div>
+
+                <div className="process-number">{step.number}</div>
+                <div className="process-label">{step.label}</div>
+              </motion.div>
+
+              {index < PROCESS_STEPS.length - 1 && (
+                <div className="process-connector">
+                  <span className="process-dot" />
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+        </motion.div>
+      </section>
+
+      {/* MISSION & VISION */}
+      <section className="about-mission-vision">
+        <div className="mv-container">
+          <motion.div
+            className="mv-panel-wrap mv-mission-shape"
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="mv-panel mv-mission-shape">
+              <div className="mv-icon">
+                <Target size={26} />
+              </div>
+              <div className="mv-text">
+                <span className="mv-eyebrow">Our Mission</span>
+                <h3>Engineering Reliable Infrastructure</h3>
+                <p>
+                  To deliver reliable, engineered and cost-effective
+                  structural steel solutions that help businesses build
+                  efficient and future-ready infrastructure.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="mv-image"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <img src={missionVisionImg} alt="Site engineers" />
+          </motion.div>
+
+          <motion.div
+            className="mv-panel-wrap mv-vision-shape"
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="mv-panel mv-vision-shape">
+              <div className="mv-icon">
+                <Eye size={26} />
+              </div>
+              <div className="mv-text">
+                <span className="mv-eyebrow">Our Vision</span>
+                <h3>Building Trust Through Engineering</h3>
+                <p>
+                  To become a trusted structural steel and industrial
+                  construction partner for businesses across India through
+                  engineering excellence, quality and dependable project
+                  execution.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* OUR VALUES */}
+      <section className="about-values">
+        <motion.h2
+          className="values-title"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Our Values
+        </motion.h2>
+
+        <motion.div
+          className="values-card"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {VALUES.map((value) => (
+            <motion.div
+              className="value-item"
+              key={value.title}
+              variants={fadeInUp}
+            >
+              <div className={`value-icon ${value.tone}`}>
+                <value.icon size={22} />
+              </div>
+              <h4>{value.title}</h4>
+              <p>{value.body}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
     </div>
   );

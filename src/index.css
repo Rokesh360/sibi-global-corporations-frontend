@@ -6938,6 +6938,345 @@ display: none !important;
   }
 }
 
+/* =========================================
+   PROCESS TIMELINE
+========================================= */
+
+.about-process {
+  padding: 18px 6% 28px;
+  background: var(--white);
+  text-align: center;
+}
+
+.process-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 7px;
+}
+
+.process-title h2 {
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.process-title-line {
+  width: 54px;
+  height: 1px;
+  background: var(--orange);
+}
+
+.process-subtitle {
+  max-width: 620px;
+  margin: 0 auto 25px;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.process-track {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 135px;
+}
+
+.process-hex {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  background: #d8dee8;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  transition: 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.process-hex::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--white);
+  clip-path: inherit;
+}
+
+.process-hex svg {
+  position: relative;
+  z-index: 1;
+}
+
+.process-number {
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.process-label {
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.process-connector {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  min-width: 20px;
+  border-top: 2px dotted #e3a94c;
+  margin-top: 39px;
+}
+
+.process-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+  margin-top: -5px;
+}
+
+/* =========================================
+   MISSION & VISION
+========================================= */
+
+.about-mission-vision {
+  padding: 0 6% 22px;
+  background: var(--white);
+}
+
+.mv-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr;
+  align-items: stretch;
+  height: 166px;
+}
+
+.mv-panel-wrap {
+  background: var(--orange);
+  padding: 3px 0;
+}
+
+.mv-mission-shape {
+  clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
+  margin-right: -53px;
+}
+
+.mv-vision-shape {
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 8% 100%, 0 50%);
+  margin-left: -53px;
+}
+
+.mv-panel {
+  height: 100%;
+  background: var(--navy-deep);
+  padding: 24px 38px 24px 25px;
+  display: flex;
+  gap: 18px;
+  clip-path: none;
+}
+
+.mv-vision-shape.mv-panel {
+  padding: 24px 25px 24px 90px;
+}
+
+.mv-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+}
+
+.mv-eyebrow {
+  display: block;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.mv-text h3 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 7px;
+}
+
+.mv-text p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.mv-image {
+  border-radius: 0;      /* reference has sharp edges, not rounded */
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.mv-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* crops to fill instead of leaving gaps */
+  display: block;        /* removes inline-img baseline gap */
+}
+
+/* =========================================
+   OUR VALUES
+========================================= */
+
+.about-values {
+  padding: 0 6% 35px;
+  background: var(--white);
+  text-align: center;
+}
+
+.values-title {
+  color: var(--navy);
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+
+.values-title::before,
+.values-title::after {
+  content: "";
+  display: inline-block;
+  width: 55px;
+  height: 1px;
+  margin: 0 16px 6px;
+  background: var(--orange);
+}
+
+.values-card {
+  max-width: 1300px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid #eceef3;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(8, 26, 61, 0.06);
+  padding: 17px 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 18px;
+  border-right: 1px solid #e1e4ea;
+}
+
+.value-item:last-child {
+  border-right: none;
+}
+
+.value-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.value-icon.navy {
+  background: var(--navy);
+}
+
+.value-icon.orange {
+  background: var(--orange);
+}
+
+.value-item h4 {
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.value-item p {
+  color: #667085;
+  font-size: 10px;
+  line-height: 1.4;
+  max-width: 190px;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .process-track {
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+  .process-connector {
+    display: none;
+  }
+  .mv-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: auto;
+  }
+  .mv-mission-shape,
+  .mv-vision-shape {
+    clip-path: none;
+    border-radius: 12px;
+  }
+  .mv-panel,
+  .mv-vision-shape.mv-panel {
+    padding: 35px;
+  }
+  .values-card {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .process-step {
+    width: 45%;
+  }
+  .values-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .floating-actions {
   position: fixed;
   right: 24px;
@@ -6990,6 +7329,14 @@ display: none !important;
   .floating-btn {
     width: 48px !important;
     height: 48px;
+  }
+
+  .mv-mission-shape {
+    margin-right: 0;
+  }
+
+  .mv-vision-shape {
+    margin-left: 0;
   }
 }
 
