@@ -27,49 +27,137 @@ import {
     User,
     MessageSquare,
 } from "lucide-react";
-import WhyChooseImg from "../../../public/assets/img/why-choose.png";
 import WhyChooseBannerImg from "../../../public/assets/img/why-choose-banner.jpg";
 
 /* ---------------------------------------------------------
    DATA
 --------------------------------------------------------- */
 
-const features = [
+const REASONS = [
     {
-        icon: "⚙",
+        id: "01",
         title: "Engineering-Led Approach",
         description:
             "Every project begins with understanding the application, site conditions and structural requirements before developing the right solution.",
+        image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
+        theme: "navy",
     },
     {
-        icon: "♙",
+        id: "02",
         title: "Precision Fabrication",
         description:
             "Controlled fabrication processes help maintain consistency, dimensional accuracy and structural quality.",
+        image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop",
+        theme: "white",
     },
     {
-        icon: "✓",
+        id: "03",
         title: "Project-Focused Execution",
         description:
             "We plan fabrication and site activities around project schedules to support efficient execution.",
+        image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
+        theme: "white",
     },
     {
-        icon: "◉",
+        id: "04",
         title: "Quality Control",
         description:
             "Quality checks are incorporated across material handling, fabrication, assembly and erection stages.",
+        image: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600&h=400&fit=crop",
+        theme: "navy",
     },
     {
-        icon: "⚒",
+        id: "05",
         title: "Customised Solutions",
         description:
             "We don't believe every industrial project needs the same structure. Our solutions are developed according to individual project requirements.",
+        image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&h=400&fit=crop",
+        theme: "navy",
     },
     {
-        icon: "⌁",
+        id: "06",
         title: "Single-Point Coordination",
         description:
             "From engineering and fabrication to site erection, our integrated approach simplifies project coordination.",
+        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop",
+        theme: "white",
+    },
+];
+
+const PROCESS_STEPS = [
+    {
+        title: "ENGINEERING",
+        icon: (
+            <svg viewBox="0 0 64 64">
+                <rect x="19" y="17" width="26" height="30" rx="2" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <line x1="25" y1="23" x2="25" y2="41" stroke="currentColor" strokeWidth="3"/>
+                <line x1="39" y1="23" x2="39" y2="41" stroke="currentColor" strokeWidth="3"/>
+                <circle cx="31.5" cy="27" r="2" fill="currentColor"/>
+                <circle cx="31.5" cy="37" r="2" fill="currentColor"/>
+                <path d="M14 49h36" stroke="currentColor" strokeWidth="3"/>
+            </svg>
+        ),
+    },
+    {
+        title: "FABRICATION",
+        icon: (
+            <svg viewBox="0 0 64 64">
+                <path d="M17 44h30" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M20 44V29h24v15" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M25 29v-7h14v7" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <circle cx="24" cy="48" r="3" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <circle cx="40" cy="48" r="3" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M29 35h6" stroke="currentColor" strokeWidth="3"/>
+            </svg>
+        ),
+    },
+    {
+        title: "QUALITY",
+        icon: (
+            <svg viewBox="0 0 64 64">
+                <path d="M32 12l17 7v12c0 11-7 19-17 23 C22 50 15 42 15 31V19l17-7z" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M25 32l5 5 10-11" fill="none" stroke="currentColor" strokeWidth="3"/>
+            </svg>
+        ),
+    },
+    {
+        title: "ASSEMBLY",
+        icon: (
+            <svg viewBox="0 0 64 64">
+                <circle cx="22" cy="24" r="5" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <circle cx="42" cy="24" r="5" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <circle cx="32" cy="20" r="5" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M13 45c0-7 4-11 9-11s9 4 9 11" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M33 45c0-7 4-11 9-11s9 4 9 11" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M23 39c0-7 4-11 9-11s9 4 9 11" fill="none" stroke="currentColor" strokeWidth="3"/>
+            </svg>
+        ),
+    },
+    {
+        title: "ERECTION",
+        icon: (
+            <svg viewBox="0 0 64 64">
+                <path d="M13 20h37" stroke="currentColor" strokeWidth="3"/>
+                <path d="M22 20l-8 27" stroke="currentColor" strokeWidth="3"/>
+                <path d="M22 20l11 27" stroke="currentColor" strokeWidth="3"/>
+                <path d="M22 20l15 9h13" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M44 29v11" stroke="currentColor" strokeWidth="3"/>
+                <rect x="40" y="40" width="9" height="7" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M9 47h44" stroke="currentColor" strokeWidth="3"/>
+            </svg>
+        ),
+    },
+    {
+        title: "PROJECT DELIVERY",
+        icon: (
+            <svg viewBox="0 0 64 64">
+                <rect x="10" y="22" width="30" height="21" rx="2" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M40 29h9l7 8v6H40" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <circle cx="21" cy="45" r="5" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <circle cx="47" cy="45" r="5" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M45 29v8h11" stroke="currentColor" strokeWidth="3"/>
+            </svg>
+        ),
     },
 ];
 
@@ -77,36 +165,32 @@ const features = [
    ANIMATION VARIANTS
 --------------------------------------------------------- */
 
-const containerVariants = {
-    hidden: {},
-    visible: {
-        transition: {
-            staggerChildren: 0.15,
-        },
-    },
-};
-
-const featureVariants = {
-    hidden: {
-        opacity: 0,
-        x: 50,
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 0.6,
-            ease: "easeOut",
-        },
-    },
-};
-
 const fadeInRight = {
     hidden: { opacity: 0, x: 50 },
     visible: {
         opacity: 1,
         x: 0,
         transition: { duration: 0.6, ease: "easeOut" },
+    },
+};
+
+const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
+    },
+};
+
+const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.05,
+        },
     },
 };
 
@@ -132,7 +216,6 @@ export default function WhyChooseUs() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form submitted:", formData);
-        // Add your form submission logic here
     };
 
     return (
@@ -260,149 +343,105 @@ export default function WhyChooseUs() {
                 </div>
             </section>
 
-            {/* ================= WHY CHOOSE SECTION WITH IMAGE ================= */}
+            {/* ================= WHY CHOOSE SECTION - HTML DESIGN ================= */}
             <section className="why-choose-section">
-                {/* LEFT IMAGE */}
-                <motion.div
-                    className="why-image"
-                    initial={{
-                        opacity: 0,
-                        x: -100,
-                        scale: 0.95,
-                    }}
-                    whileInView={{
-                        opacity: 1,
-                        x: 0,
-                        scale: 1,
-                    }}
-                    viewport={{
-                        once: true,
-                        amount: 0.3,
-                    }}
-                    transition={{
-                        duration: 1,
-                        ease: "easeOut",
-                    }}
-                >
-                    <motion.img
-                        src={WhyChooseImg}
-                        alt="SIBI Global Steel Construction"
-                        whileHover={{
-                            scale: 1.03,
-                        }}
-                        transition={{
-                            duration: 0.4,
-                        }}
-                    />
-                </motion.div>
-
-                {/* RIGHT CONTENT */}
-                <div className="why-content">
+                <div className="why-container">
+                    {/* SECTION HEADING */}
                     <motion.div
-                        className="why-inner"
+                        className="why-heading"
+                        variants={fadeInUp}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{
-                            once: true,
-                            amount: 0.2,
-                        }}
-                        variants={containerVariants}
+                        viewport={{ once: true }}
                     >
-                        {/* LABEL */}
-                        <motion.span
-                            className="why-label"
-                            initial={{
-                                opacity: 0,
-                                y: 20,
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: 0,
-                            }}
-                            viewport={{
-                                once: true,
-                            }}
-                            transition={{
-                                duration: 0.5,
-                            }}
-                        >
-                            WHY CHOOSE SIBI GLOBAL
-                        </motion.span>
+                        <span className="section-line"></span>
+                        <span className="section-label">OUR ADVANTAGE</span>
+                        <h2>6 Reasons to Choose Sibi Global</h2>
+                    </motion.div>
 
-                        {/* HEADING */}
-                        <motion.h2
-                            initial={{
-                                opacity: 0,
-                                y: 40,
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: 0,
-                            }}
-                            viewport={{
-                                once: true,
-                            }}
-                            transition={{
-                                duration: 0.8,
-                                delay: 0.15,
-                                ease: "easeOut",
-                            }}
-                        >
-                            Building <div className="yellow_text_highlight">Stronger Foundations</div>
-                            <br />
-                            for Your Business
-                        </motion.h2>
+                    {/* REASONS GRID */}
+                    <motion.div
+                        className="reason-row"
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        {REASONS.map((reason, index) => (
+                            <motion.div
+                                className={`reason-card ${reason.theme}-card`}
+                                key={reason.id}
+                                variants={fadeInUp}
+                                whileHover={{
+                                    y: -6,
+                                    boxShadow: "0 20px 45px rgba(12, 35, 67, 0.15)",
+                                    transition: { duration: 0.3 },
+                                }}
+                            >
+                                <div className="reason-content">
+                                    <div className="number-badge">{reason.id}</div>
+                                    <h3>{reason.title}</h3>
+                                    <p>{reason.description}</p>
+                                </div>
+                                <div className="card-image">
+                                    <img src={reason.image} alt={reason.title} />
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
 
-                        {/* FEATURES */}
-                        <motion.div
-                            className="why-features"
-                            variants={containerVariants}
-                        >
-                            {features.map((feature, index) => (
-                                <motion.div
-                                    className="why-feature"
-                                    key={index}
-                                    variants={featureVariants}
-                                    whileHover={{
-                                        x: 8,
-                                        transition: {
-                                            duration: 0.25,
-                                        },
-                                    }}
-                                >
-                                    {/* ICON */}
+            {/* ================= PROCESS SECTION ================= */}
+            <section className="process-section">
+                <div className="process-container">
+                    {/* LEFT CONTENT */}
+                    <motion.div
+                        className="process-intro"
+                        variants={fadeInUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <h2>
+                            From Engineering<br />
+                            to <strong>Project Delivery</strong>
+                        </h2>
+                        <p className="process-description">
+                            A seamless process that ensures quality,<br />
+                            accuracy and timely delivery for every project.
+                        </p>
+                    </motion.div>
+
+                    {/* PROCESS STEPS */}
+                    <motion.div
+                        className="process-steps"
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        {PROCESS_STEPS.map((step, index) => (
+                            <React.Fragment key={index}>
+                                <motion.div className="process-item" variants={fadeInUp}>
                                     <motion.div
-                                        className="feature-icon"
+                                        className="process-circle"
                                         whileHover={{
-                                            rotate: 360,
-                                            scale: 1.1,
-                                        }}
-                                        transition={{
-                                            duration: 0.6,
-                                            ease: "easeInOut",
+                                            y: -5,
+                                            scale: 1.05,
+                                            boxShadow: "0 8px 20px rgba(0, 0, 0, 0.25)",
+                                            transition: { duration: 0.3 },
                                         }}
                                     >
-                                        <span>{feature.icon}</span>
+                                        {step.icon}
                                     </motion.div>
-
-                                    {/* TEXT */}
-                                    <div className="feature-text">
-                                        <motion.h3
-                                            whileHover={{
-                                                x: 4,
-                                            }}
-                                            transition={{
-                                                duration: 0.2,
-                                            }}
-                                        >
-                                            {feature.title}
-                                        </motion.h3>
-
-                                        <p>{feature.description}</p>
-                                    </div>
+                                    <span className="process-name">{step.title}</span>
                                 </motion.div>
-                            ))}
-                        </motion.div>
+                                {index < PROCESS_STEPS.length - 1 && (
+                                    <div className="process-arrow">›</div>
+                                )}
+                            </React.Fragment>
+                        ))}
                     </motion.div>
                 </div>
             </section>

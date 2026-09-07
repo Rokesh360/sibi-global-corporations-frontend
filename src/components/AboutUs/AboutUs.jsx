@@ -22,6 +22,7 @@ import {
 import aboutImg from "../../../public/assets/img/about-banner.png";
 import commitmentImg from "../../../public/assets/img/commitment.jpg";
 import missionVisionImg from "../../../public/assets/img/mission-vision.png";
+import WhyChooseSection from "../WhyChooseSection";
 
 const HERO_STATS = [
   {
@@ -870,6 +871,8 @@ export default function AboutUs() {
           ))}
         </motion.div>
       </section>
+
+      <WhyChooseSection />
     </div>
   );
 }
