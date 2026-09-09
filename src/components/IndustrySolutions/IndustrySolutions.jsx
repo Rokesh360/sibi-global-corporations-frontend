@@ -308,7 +308,7 @@ export default function IndustrySolutions() {
                             with precision, reliability, and long-term value.
                         </p>
 
-                        <div className="sibi-hero-stats">
+                        {/* <div className="sibi-hero-stats">
                             <div className="sibi-stat">
                                 <Building2 size={28} className="sibi-stat-icon" />
                                 <div>
@@ -340,7 +340,7 @@ export default function IndustrySolutions() {
                                     <span>Quality Assured</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </motion.div>
 
                     <motion.div

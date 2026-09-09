@@ -212,7 +212,7 @@ export default function OurSolutions() {
                         transition={{ duration: 0.8 }}
                     >
                         <h1>
-                            <div className="about-hero-label">
+                            <div className="about-hero-label solutions">
                                 <span className="label-line" />
                                 <span>⚙ Solutions</span>
                                 <span className="label-line" />
@@ -225,7 +225,7 @@ export default function OurSolutions() {
                             stronger tomorrow.
                         </p>
 
-                        <div className="solutions-page-hero-stats-mini">
+                        {/* <div className="solutions-page-hero-stats-mini">
                             {HERO_STATS.map(({ icon: Icon, value, suffix, label }) => (
                                 <div className="solutions-page-hero-stat-mini" key={label}>
                                     <Icon size={20} className="solutions-page-hero-stat-mini-icon" />
@@ -238,7 +238,7 @@ export default function OurSolutions() {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </motion.div>
 
                     {/* Right Side - Form */}

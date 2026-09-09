@@ -328,7 +328,7 @@ export default function Technology() {
                             project coordination.
                         </p>
 
-                        <div className="technology-page-hero-features">
+                        {/* <div className="technology-page-hero-features">
                             {TECHNOLOGY_FEATURES.map((feature, index) => (
                                 <div className="technology-page-hero-feature" key={index}>
                                     <div className="tech-hero-icon">
@@ -337,7 +337,7 @@ export default function Technology() {
                                     <h4>{feature.title}</h4>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </motion.div>
 
                     {/* Right Side - Form */}

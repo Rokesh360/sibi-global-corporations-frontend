@@ -44,6 +44,7 @@ import {
 import { useParams, Link } from "react-router-dom";
 import ProjectBannerImg from "../../../../public/assets/img/solutions-banner.png";
 import ProjectImg1 from "../../../../public/assets/img/projects/warehouse.webp";
+import WarehouseGalleryImg1 from "../../../../public/assets/img/warehouse.png";
 import ProjectImg2 from "../../../../public/assets/img/projects/heavy-engineering-fabrication-facility.webp";
 import ProjectImg3 from "../../../../public/assets/img/projects/food-processing-industrial-shed.jpg";
 import ProjectImg4 from "../../../../public/assets/img/projects/corporate-office-mezzanine-floor.jfif";
@@ -79,8 +80,7 @@ const PROJECTS = [
     result: "Successfully delivered a state-of-the-art logistics facility with 40% higher storage capacity and 25% faster material handling efficiency.",
     gallery: [
       ProjectImg1,
-      "https://images.unsplash.com/photo-1581092335872-5c6c9fe3a6f9?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=500&fit=crop",
+      WarehouseGalleryImg1,
     ],
     challenges: [
       "Large-span structural requirements",
@@ -384,6 +384,7 @@ const staggerContainer = {
   },
 };
 
+
 /* ---------------------------------------------------------
    MAIN COMPONENT
 --------------------------------------------------------- */
@@ -450,7 +451,8 @@ export default function ProjectDetails() {
             <h1>
               {project.name}
             </h1>
-            <div className="project-details-hero-meta">
+            <p className="banner-content-p-tag">State-of-the-art pre-engineered building for a leading logistics company featuring high-bay storage and automated material handling systems.</p>
+            {/* <div className="project-details-hero-meta">
               <span>
                 <MapPinIcon size={18} />
                 {project.location}
@@ -466,7 +468,7 @@ export default function ProjectDetails() {
               <span className={`status-badge ${project.status === "Completed" ? "status-completed" : "status-progress"}`}>
                 {project.status}
               </span>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Side - Form */}
@@ -723,7 +725,7 @@ export default function ProjectDetails() {
       )}
 
       {/* ================= TESTIMONIALS ================= */}
-      {project.testimonials && project.testimonials.length > 0 && (
+      {/* {project.testimonials && project.testimonials.length > 0 && (
         <section className="project-details-testimonials">
           <div className="project-details-testimonials-container">
             <motion.div
@@ -761,7 +763,9 @@ export default function ProjectDetails() {
             </motion.div>
           </div>
         </section>
-      )}
+      )} */}
+
+     
     </div>
   );
 }

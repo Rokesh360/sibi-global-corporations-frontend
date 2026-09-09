@@ -1024,7 +1024,8 @@ export default function SolutionDetails() {
               {solution.title}
             </h1>
             <div className="solution-details-hero-meta">
-              <span>
+              <p className="banner-content-p-tag">A steel building system where the structural components are designed and manufactured in a factory, then transported to the site and assembled quickly.</p>
+              {/* <span>
                 <span className="solution-number-badge">{solution.number}</span>
               </span>
               <span>
@@ -1034,7 +1035,7 @@ export default function SolutionDetails() {
               <span>
                 <Clock size={18} />
                 {solution.duration}
-              </span>
+              </span> */}
             </div>
           </motion.div>
 
