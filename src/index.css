@@ -2151,7 +2151,6 @@ header css */
 
   font-weight: 700;
 
-  : 0.5px;
 }
 
 .industries-heading h2 {
@@ -6337,14 +6336,14 @@ padding: 30px 5% 30px !important;
 .about-hero-label {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 14px;
   margin-bottom: 18px;
 
   color: var(--orange);
   font-size: 16px;
   font-weight: 700;
-  : 0.5px;
+
 }
 
 .label-line {
@@ -6360,7 +6359,6 @@ padding: 30px 5% 30px !important;
   font-size: 52px;
   font-weight: 700;
   line-height: 1.15;
-  : -1px;
 }
 
 .about-hero-content h1 span {
@@ -7252,7 +7250,6 @@ padding: 30px 5% 30px !important;
   color: var(--orange);
   font-weight: 700;
   font-size: 20px;
-  : 0.5px;
   margin-bottom: 12px;
 }
 
@@ -13541,7 +13538,6 @@ padding: 30px 5% 30px !important;
   font-weight: 600;
   color: #888;
   text-transform: uppercase;
-  : 0.5px;
 }
 
 .projects-page-modal-detail-item span {
@@ -14307,7 +14303,6 @@ padding: 30px 5% 30px !important;
   font-weight: 600;
   color: #888;
   text-transform: uppercase;
-  : 0.5px;
 }
 
 .overview-item span {
@@ -19185,7 +19180,6 @@ padding: 30px 5% 30px !important;
   color: #08294a;
   font-size: 12px;
   font-weight: 800;
-  : 0.3px;
   cursor: pointer;
   border-radius: 3px;
   transition: all 0.3s ease;
@@ -22836,7 +22830,6 @@ width: 35px;
   font-size: 12px;
   font-weight: 700;
 
-  letter-spacing: 0.5px;
 }
 
 .hero-label i {
@@ -24029,4 +24022,10 @@ color: #fff;
 .heading_yellow_color
 {
   color: #fff;
+}
+
+
+.label-line
+{
+  display: none !important;
 }
