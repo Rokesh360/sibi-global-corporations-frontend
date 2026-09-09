@@ -75,9 +75,8 @@ const CONTACT_INFO = [
         icon: "location",
         title: "Our Office",
         details: [
-            "No. 78, A, SIPCOT Industrial Complex,",
-            "Irrungattukottai, Chennai – 602105,",
-            "Tamil Nadu, India.",
+            "No. 78, A, SIPCOT Industrial Complex, Irrungattukottai, Chennai – 602105, Tamil Nadu, India.",
+           
         ],
         color: "#0b2350",
         gradient: "linear-gradient(135deg, #0b2350, #1a3d6b)",

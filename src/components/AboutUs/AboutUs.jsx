@@ -22,34 +22,8 @@ import {
 import aboutImg from "../../../public/assets/img/about-banner.png";
 import commitmentImg from "../../../public/assets/img/commitment.jpg";
 import missionVisionImg from "../../../public/assets/img/mission-vision.png";
-import WhyChooseSection from "../WhyChooseSection";
 
-const HERO_STATS = [
-  {
-    icon: Building2,
-    value: 250,
-    suffix: "+",
-    label: "Projects Delivered",
-  },
-  {
-    icon: BadgeCheck,
-    value: 15,
-    suffix: "+",
-    label: "Years of Experience",
-  },
-  {
-    icon: Factory,
-    value: 12000,
-    suffix: " MT",
-    label: "Fabrication Capacity",
-  },
-  {
-    icon: Users,
-    value: 20,
-    suffix: "+",
-    label: "Industries Served",
-  },
-];
+
 
 const PROCESS_STEPS = [
   { number: "01", icon: PencilRuler, label: "Engineering" },
@@ -422,74 +396,6 @@ export default function AboutUs() {
           </motion.div>
         </div>
 
-        <motion.div
-          className="about-hero-stats"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{
-            once: true,
-          }}
-        >
-          {HERO_STATS.map(
-            (
-              {
-                icon: Icon,
-                value,
-                suffix,
-                label,
-              },
-              index
-            ) => (
-              <motion.div
-                className="about-stat"
-                key={label}
-                variants={fadeInUp}
-                whileHover={{
-                  y: -5,
-                  transition: {
-                    duration: 0.3,
-                  },
-                }}
-              >
-                <Icon
-                  className="about-stat-icon"
-                  size={38}
-                />
-
-                <div className="about-stat-info">
-                  <motion.div
-                    className="about-stat-value"
-                    initial={{
-                      opacity: 0,
-                      scale: 0.5,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      scale: 1,
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.3 + index * 0.1,
-                    }}
-                  >
-                    <CountUp
-                      value={value}
-                      suffix={suffix}
-                    />
-                  </motion.div>
-
-                  <div className="about-stat-label">
-                    {label}
-                  </div>
-                </div>
-              </motion.div>
-            )
-          )}
-        </motion.div>
       </section>
 
       <section className="about-story">
@@ -527,7 +433,7 @@ export default function AboutUs() {
               on time and built to last.
             </p>
 
-            <motion.a
+            {/* <motion.a
               href="#"
               className="about-story-btn"
               whileHover={{
@@ -539,7 +445,7 @@ export default function AboutUs() {
             >
               Learn More About Us
               <ArrowRight size={16} />
-            </motion.a>
+            </motion.a> */}
           </motion.div>
 
           <motion.div
@@ -725,7 +631,7 @@ export default function AboutUs() {
           viewport={{ once: true }}
         >
           <span className="process-title-line" />
-          <h2>From Engineering to Execution</h2>
+          <h2>From Engineering to <span class="highlight">Execution</span></h2>
           <span className="process-title-line" />
         </motion.div>
 
@@ -846,7 +752,7 @@ export default function AboutUs() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Our Values
+          Our <span class="highlight">Values</span>
         </motion.h2>
 
         <motion.div
@@ -872,7 +778,7 @@ export default function AboutUs() {
         </motion.div>
       </section>
 
-      <WhyChooseSection />
+
     </div>
   );
 }

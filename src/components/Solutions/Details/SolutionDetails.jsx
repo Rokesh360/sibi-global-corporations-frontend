@@ -523,10 +523,10 @@ const NewSectionsStyles = () => (
       background: #f2a900;
     }
     .sd-section-label p {
-      color: #35415a;
-      font-size: 13px;
+      color: #f2a900;
+      font-size: 14px;
       font-weight: 600;
-      letter-spacing: 0.02em;
+
       margin: 0;
     }
     .sd-section-label--light p {
@@ -536,7 +536,7 @@ const NewSectionsStyles = () => (
     /* ===== What is this solution ===== */
     .sd-whatis-section {
       width: 100%;
-      padding: 60px 0;
+      padding: 30px 0 40px 0px;
       background: #ffffff;
     }
     .sd-whatis-container {
@@ -738,9 +738,9 @@ const NewSectionsStyles = () => (
     }
     .sd-why-content p {
       color: rgba(255, 255, 255, 0.88);
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.7;
-      font-weight: 400;
+      font-weight: 700;
       margin: 0;
     }
     .sd-why-features {
@@ -876,10 +876,10 @@ const NewSectionsStyles = () => (
     }
     .sd-ctastrip-content h2 {
       color: #0b376a;
-      font-size: 26px;
+      font-size: 32px;
       line-height: 1.2;
       font-weight: 700;
-      margin: 0 0 6px;
+      margin: 0 0 12px;
     }
     .sd-ctastrip-content p {
       color: #596b82;
@@ -1172,10 +1172,9 @@ export default function SolutionDetails() {
               viewport={{ once: true }}
             >
               <div className="sd-section-label">
-                <span />
                 <p>WHAT IS IT</p>
               </div>
-              <h2>What Is {solution.title}?</h2>
+              <h2>What Is <span className="highlight">{solution.title}?</span></h2>
               <p>{solution.description}</p>
             </motion.div>
 
@@ -1222,10 +1221,10 @@ export default function SolutionDetails() {
               viewport={{ once: true }}
             >
               <div className="sd-section-label">
-                <span />
+               
                 <p>APPLICATIONS</p>
               </div>
-              <h2>Ideal for Multiple Industries</h2>
+              <h2>Ideal for <span className="highlight">Multiple Industries</span></h2>
               <p>
                 {solution.title} solutions from Sibi Global are widely used
                 across the following sectors and use cases.
@@ -1276,10 +1275,10 @@ export default function SolutionDetails() {
             viewport={{ once: true }}
           >
             <div className="sd-section-label sd-section-label--light">
-              <span />
+            
               <p>WHY CHOOSE US</p>
             </div>
-            <h2>Your Trusted {solution.title} Partner</h2>
+            <h2>Your Trusted  <span className="highlight">{solution.title}</span> Partner</h2>
             <p>
               With years of expertise and a commitment to excellence, we
               deliver high-quality {solution.title.toLowerCase()} that meet
@@ -1325,10 +1324,10 @@ export default function SolutionDetails() {
             viewport={{ once: true }}
           >
             <div className="sd-section-label">
-              <span />
+            
               <p>PROJECT GALLERY</p>
             </div>
-            <h2>Our {solution.title} Projects</h2>
+            <h2>Our <span className="highlight">{solution.title}</span> Projects</h2>
             <p>
               Explore a glimpse of our completed {solution.title.toLowerCase()}{" "}
               projects delivered for clients across various industries.
@@ -1371,10 +1370,10 @@ export default function SolutionDetails() {
             viewport={{ once: true }}
           >
             <div className="sd-section-label">
-              <span />
+              
               <p>LET'S BUILD TOGETHER</p>
             </div>
-            <h2>Build Smarter. Build Stronger.</h2>
+            <h2>Build Smarter.  <span className="highlight">Build Stronger.</span></h2>
             <p>Talk to our engineering team about your next industrial building project.</p>
           </motion.div>
 

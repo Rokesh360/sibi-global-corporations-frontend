@@ -552,7 +552,7 @@ export default function Manufacturing() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2>End-to-End Fabrication Excellence</h2>
+            <h2>End-to-End <span className="highlight">Fabrication Excellence</span></h2>
             <p>
               We follow a systematic fabrication process with advanced equipment
               and skilled professionals to deliver high-quality structural steel components.
@@ -650,7 +650,7 @@ export default function Manufacturing() {
             <h2>
               Precision.<br />
               Quality.<br />
-              Performance.
+             <span className="highlight">Performance.</span> 
             </h2>
             <div className="manufacturing-yellow-line"></div>
             <p>

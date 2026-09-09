@@ -84,6 +84,14 @@ const REASONS = [
     },
 ];
 
+const KEY_STATS = [
+  { icon: ShieldCheck, value: "100%", label: "Safety Compliance" },
+  { icon: Award, value: "15+", label: "Years of Excellence" },
+  { icon: Users, value: "50+", label: "Trained Professionals" },
+  { icon: Clock, value: "98%", label: "Quality Approval Rate" },
+];
+
+
 const PROCESS_STEPS = [
     {
         title: "ENGINEERING",
@@ -354,9 +362,9 @@ export default function WhyChooseUs() {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <span className="section-line"></span>
+                       
                         <span className="section-label">OUR ADVANTAGE</span>
-                        <h2>6 Reasons to Choose Sibi Global</h2>
+                        <h2>6 Reasons to Choose <span className="highlight">Sibi Global</span></h2>
                     </motion.div>
 
                     {/* REASONS GRID */}
@@ -380,7 +388,7 @@ export default function WhyChooseUs() {
                             >
                                 <div className="reason-content">
                                     <div className="number-badge">{reason.id}</div>
-                                    <h3>{reason.title}</h3>
+                                    <h3 className="heading_yellow_color">{reason.title}</h3>
                                     <p>{reason.description}</p>
                                 </div>
                                 <div className="card-image">
@@ -445,6 +453,32 @@ export default function WhyChooseUs() {
                     </motion.div>
                 </div>
             </section>
+
+
+{/* ================= STATS BAR ================= */}
+      <section className="quality-page-stats">
+        <div className="quality-page-stats-container">
+          {KEY_STATS.map(({ icon: Icon, value, suffix, label }, index) => (
+            <motion.div
+              className="quality-page-stat-item"
+              key={label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5, transition: { duration: 0.3 } }}
+            >
+              <Icon size={32} className="quality-page-stat-icon" />
+              <div className="quality-page-stat-value">
+                {value}
+                {suffix && <span> {suffix}</span>}
+              </div>
+              <div className="quality-page-stat-label">{label}</div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
         </div>
     );
 }

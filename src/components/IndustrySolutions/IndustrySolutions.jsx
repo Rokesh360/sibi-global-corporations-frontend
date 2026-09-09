@@ -552,7 +552,7 @@ export default function IndustrySolutions() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2>LET'S BUILD THE FUTURE TOGETHER</h2>
+                        <h2>LET'S BUILD THE  <span className="highlight">FUTURE TOGETHER </span></h2>
                         <p>
                             Partner with Sibi Global for reliable, innovative, and
                             high-performance steel structure solutions.
@@ -614,11 +614,11 @@ export default function IndustrySolutions() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="sibi-why-line" />
+                      
                         <h2>
                             Why Industries
                             <br />
-                            Choose Us
+                            <span className="highlight">Choose Us</span> 
                         </h2>
                         <p>
                             We combine engineering expertise with advanced technology

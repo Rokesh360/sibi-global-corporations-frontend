@@ -242,7 +242,7 @@ export default function Engineering() {
               project-specific solutions.
             </p>
 
-            <div className="engineering-page-hero-stats">
+            {/* <div className="engineering-page-hero-stats">
               {KEY_STATS.map(({ icon: Icon, value, label }, index) => (
                 <div className="engineering-page-stat" key={label}>
                   <Icon size={28} className="stat-icon" />
@@ -252,7 +252,7 @@ export default function Engineering() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Side - Form */}
@@ -464,6 +464,31 @@ export default function Engineering() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+
+      {/* ================= STATS BAR ================= */}
+      <section className="quality-page-stats">
+        <div className="quality-page-stats-container">
+          {KEY_STATS.map(({ icon: Icon, value, suffix, label }, index) => (
+            <motion.div
+              className="quality-page-stat-item"
+              key={label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5, transition: { duration: 0.3 } }}
+            >
+              <Icon size={32} className="quality-page-stat-icon" />
+              <div className="quality-page-stat-value">
+                {value}
+                {suffix && <span> {suffix}</span>}
+              </div>
+              <div className="quality-page-stat-label">{label}</div>
+            </motion.div>
+          ))}
         </div>
       </section>
     </div>

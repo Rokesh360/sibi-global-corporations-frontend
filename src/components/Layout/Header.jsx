@@ -42,27 +42,27 @@ const navItems = [
     dropdown: [
       {
         label: "Pre-Engineered Buildings",
-        path: "/pre-engineered-buildings",
+        path: "/solutions/details/pre-engineered-buildings",
       },
       {
         label: "Structural Steel Fabrication",
-        path: "/structural-steel-fabrication",
+        path: "/solutions/details/structural-steel-fabrication",
       },
       {
         label: "Industrial Shed Construction",
-        path: "/industrial-shed-construction",
+        path: "/solutions/details/industrial-shed-construction",
       },
       {
         label: "Mezzanine Floors",
-        path: "/mezzanine-floors",
+        path: "/solutions/details/mezzanine-floors",
       },
       {
         label: "Steel Erection",
-        path: "/steel-erection",
+        path: "/solutions/details/steel-erection",
       },
       {
         label: "Turnkey Industrial Solutions",
-        path: "/turnkey-industrial-solutions",
+        path: "/solutions/details/turnkey-industrial-solutions",
       },
     ],
   },

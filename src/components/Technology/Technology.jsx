@@ -439,7 +439,7 @@ export default function Technology() {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <h2>TECHNOLOGY AREAS</h2>
+                        <h2>TECHNOLOGY <span className="highlight">AREAS </span></h2>
                     </motion.div>
 
                     <motion.div
@@ -493,7 +493,7 @@ export default function Technology() {
                         viewport={{ once: true }}
                     >
                         <div className="technology-page-column-heading">
-                            <span></span>
+                           
                             <h2>ENGINEERING TOOLS &amp; SOFTWARE</h2>
                         </div>
 
@@ -572,7 +572,7 @@ export default function Technology() {
                         viewport={{ once: true }}
                     >
                         <div className="technology-page-column-heading">
-                            <span></span>
+                          
                             <h2>OUR ENGINEERING PROCESS</h2>
                         </div>
 
@@ -644,7 +644,7 @@ export default function Technology() {
                         viewport={{ once: true }}
                     >
                         <div className="technology-page-column-heading">
-                            <span></span>
+                           
                             <h2>OUR TECHNOLOGY ADVANTAGE</h2>
                         </div>
 
@@ -690,9 +690,9 @@ export default function Technology() {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <span></span>
-                        <h2>TECHNOLOGY IN ACTION</h2>
-                        <span></span>
+                        
+                        <h2>TECHNOLOGY <span className="highlight">IN ACTION </span></h2>
+                       
                     </motion.div>
 
                     <motion.div
