@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-export default function StatsSection () {
+export default function StatsSection() {
   const [counts, setCounts] = useState({
     projects: 0,
     experience: 0,
@@ -65,14 +65,19 @@ export default function StatsSection () {
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    // Capture the current ref value
+    const section = sectionRef.current;
+
+    if (section) {
+      observer.observe(section);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (section) {
+        observer.unobserve(section);
       }
+
+      observer.disconnect();
     };
   }, [hasAnimated]);
 
