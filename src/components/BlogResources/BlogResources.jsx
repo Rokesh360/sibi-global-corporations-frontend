@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
     ArrowRight,
     Building2,
@@ -44,6 +45,19 @@ import SolutionsBannerImg from "../../../public/assets/img/solutions-banner.png"
 import PebBuildingImg from "../../../public/assets/img/solution/peb-building.jpg";
 import SteelFabricationImg from "../../../public/assets/img/solution/steel-fabrication.jpg";
 import PlanBuildingImg from "../../../public/assets/img/factory-building.webp";
+
+/* ---------------------------------------------------------
+   HELPER
+--------------------------------------------------------- */
+
+const slugify = (text) =>
+    text
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-")
+        .trim();
+
 /* ---------------------------------------------------------
    DATA
 --------------------------------------------------------- */
@@ -164,7 +178,6 @@ const RECENT_POSTS = [
         readTime: "8 min read",
     },
 ];
-
 
 /* ---------------------------------------------------------
    ANIMATION VARIANTS
@@ -424,7 +437,9 @@ export default function BlogResources() {
                                     {category.posts.slice(0, 3).map((post, idx) => (
                                         <li key={idx}>
                                             <ChevronRight size={14} />
-                                            <span>{post}</span>
+                                            <Link to={`/blog/details/${slugify(post)}`}>
+                                                {post}
+                                            </Link>
                                         </li>
                                     ))}
                                     {category.posts.length > 3 && (
@@ -491,14 +506,17 @@ export default function BlogResources() {
                                     </div>
                                     <h3>{post.title}</h3>
                                     <p>{post.excerpt}</p>
-                                    <motion.a
-                                        href="#"
-                                        className="blog-page-featured-link"
+                                    <motion.div
                                         whileHover={{ x: 5 }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        Read More <ArrowRight size={16} />
-                                    </motion.a>
+                                        <Link
+                                            to={`/blog/details/${slugify(post.title)}`}
+                                            className="blog-page-featured-link"
+                                        >
+                                            Read More <ArrowRight size={16} />
+                                        </Link>
+                                    </motion.div>
                                 </div>
                             </motion.div>
                         ))}
@@ -574,14 +592,17 @@ export default function BlogResources() {
                                                     {post.readTime}
                                                 </span>
                                             </div>
-                                            <motion.a
-                                                href="#"
-                                                className="blog-page-recent-link"
+                                            <motion.div
                                                 whileHover={{ x: 5 }}
                                                 transition={{ duration: 0.3 }}
                                             >
-                                                Read Article <ChevronRight size={14} />
-                                            </motion.a>
+                                                <Link
+                                                    to={`/blog/details/${slugify(post.title)}`}
+                                                    className="blog-page-recent-link"
+                                                >
+                                                    Read Article <ChevronRight size={14} />
+                                                </Link>
+                                            </motion.div>
                                         </div>
                                     </motion.div>
                                 ))
@@ -604,9 +625,12 @@ export default function BlogResources() {
                             whileInView="visible"
                             viewport={{ once: true }}
                         >
-                            <a href="#" className="blog-page-loadmore-btn">
+                            <Link
+                                to={`/blog/details/${slugify(RECENT_POSTS[0].title)}`}
+                                className="blog-page-loadmore-btn"
+                            >
                                 Load More Articles <ArrowRight size={16} />
-                            </a>
+                            </Link>
                         </motion.div>
                     )}
                 </div>

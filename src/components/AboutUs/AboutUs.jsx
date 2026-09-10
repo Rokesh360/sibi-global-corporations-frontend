@@ -23,8 +23,6 @@ import aboutImg from "../../../public/assets/img/about-banner.png";
 import commitmentImg from "../../../public/assets/img/commitment.jpg";
 import missionVisionImg from "../../../public/assets/img/mission-vision.png";
 
-
-
 const PROCESS_STEPS = [
   { number: "01", icon: PencilRuler, label: "Engineering" },
   { number: "02", icon: Factory, label: "Fabrication" },

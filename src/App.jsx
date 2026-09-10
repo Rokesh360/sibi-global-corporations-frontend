@@ -19,6 +19,8 @@ import Engineering from "./components/Engineering/Engineering";
 import Manufacturing from "./components/Manufacturing/Manufacturing";
 import Contact from "./components/Contact/Contact";
 import Technology from "./components/Technology/Technology";
+import Career from "./components/Career/Career";
+import BlogDetails from "./components/BlogResources/Details/BlogDetails";
 
 function App() {
   const { pathname } = useLocation();
@@ -43,6 +45,7 @@ function App() {
           <Route path="/our-process" element={<OurProcess />} />
           <Route path="/quality-and-safety" element={<QualitySafety />} />
           <Route path="/blog" element={<BlogResources />} />
+          <Route path="/blog/details/:slug" element={<BlogDetails />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/details/:slug" element={<ProjectDetails />} />
           <Route path="/solutions/details/:slug" element={<SolutionDetails />} />
@@ -51,6 +54,7 @@ function App() {
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/technology" element={<Technology />} />
+          <Route path="/career" element={<Career />} />
         </Routes>
       </main>
 

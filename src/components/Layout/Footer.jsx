@@ -36,7 +36,7 @@ export default function Footer() {
               <Link to="/manufacturing">Manufacturing</Link>
               <Link to="/industries">Industries</Link>
               <Link to="/blog">Blog</Link>
-              {/* <Link to="#">Career</Link> */}
+              <Link to="/career">Career</Link>
               <Link to="/contact">Contact Us</Link>
               <Link to="/quality-and-safety">Quality</Link>
             </div>
