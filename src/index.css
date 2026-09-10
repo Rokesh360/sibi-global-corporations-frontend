@@ -21470,7 +21470,7 @@ padding: 30px 5% 30px !important;
 .technology-page-action-title span {
   width: 68px;
   height: 2px;
-  background: #f5b316;
+  /* background: #f5b316; */
 }
 
 .technology-page-action-title h2 {
