@@ -19463,7 +19463,13 @@ padding: 30px 5% 30px !important;
     0 10px 25px rgba(11, 35, 80, 0.18),
     0 0 0 1px rgba(11, 35, 80, 0.1);
 
+  transition: transform 0.3s ease;
+
   z-index: 10;
+}
+
+.contact-page-info-card-icon:hover {
+  transform: translateX(-50%) rotate(8deg) scale(1.08);
 }
 
 .contact-page-info-card-icon::before {

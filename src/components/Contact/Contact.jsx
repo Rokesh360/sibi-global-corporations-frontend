@@ -435,11 +435,6 @@ export default function Contact() {
                                 {/* Floating Icon */}
                                 <motion.div
                                     className="contact-page-info-card-icon"
-                                    whileHover={{
-                                        rotate: 8,
-                                        scale: 1.08,
-                                        transition: { duration: 0.3 },
-                                    }}
                                 >
                                     {renderContactIcon(item.icon)}
                                 </motion.div>
