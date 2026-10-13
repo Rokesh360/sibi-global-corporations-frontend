@@ -318,14 +318,12 @@ export default function Technology() {
                             <span>✦ Technology</span>
                         </div>
                         <h1>
-                            Engineering
-                            <br />
-                            Powered by <span className="technology-page-highlight">Technology</span>
+                            Advanced Technology for 
+                            <span className="technology-page-highlight">Engineering & Industrial Solutions</span>
                         </h1>
                         <p>
-                            We use modern engineering and fabrication practices to
-                            improve structural accuracy, fabrication efficiency and
-                            project coordination.
+                           We use modern engineering and fabrication practices to improve structural accuracy, fabrication efficiency, and project coordination, ensuring reliable performance and consistent project execution.
+
                         </p>
 
                         {/* <div className="technology-page-hero-features">

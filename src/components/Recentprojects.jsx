@@ -152,8 +152,8 @@ export default function RecentProjects() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            A glimpse of some industrial and commercial projects delivered
-            by SIBI Global Corporation.
+            Explore industrial and commercial projects delivered by SIBI Global Corporation, showcasing our engineering expertise, structural steel fabrication, and engineering solutions.
+
           </motion.p>
 
           <motion.div

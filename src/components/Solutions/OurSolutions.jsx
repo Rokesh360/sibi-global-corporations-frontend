@@ -220,9 +220,8 @@ export default function OurSolutions() {
                             <span className="solutions-page-highlight">for Industrial & Commercial Projects</span>
                         </h1>
                         <p>
-                            From design and fabrication to erection and completion, we deliver
-                            comprehensive steel solutions that power industries and build a
-                            stronger tomorrow.
+                            From design and fabrication to erection and project completion, we deliver comprehensive engineering solutions that support industries and build a stronger future.
+
                         </p>
 
                         {/* <div className="solutions-page-hero-stats-mini">

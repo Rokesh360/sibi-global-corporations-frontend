@@ -10,37 +10,37 @@ const workSteps = [
     number: "01",
     title: "Understand",
     description:
-      "We begin by understanding your project requirements, site conditions, building application and operational needs.",
+      "We understand your project requirements, site conditions, building application and operational needs.",
   },
   {
     number: "02",
     title: "Engineering",
     description:
-      "Our engineering process converts project requirements into practical structural solutions and fabrication drawings.",
+      "Our engineering expertise converts project requirements into practical structural solutions and detailed fabrication drawings.",
   },
   {
     number: "03",
     title: "Plan",
     description:
-      "Project scope, quantities, fabrication requirements and execution schedules are planned before production.",
+      "We plan project scope, quantities, fabrication requirements, and execution schedules for efficient project delivery.",
   },
   {
     number: "04",
     title: "Fabricate",
     description:
-      "Structural components are fabricated under controlled manufacturing conditions with quality checks at key stages.",
+      "Our Engineering Solutions The provider approach ensures precision fabrication under controlled manufacturing conditions with quality checks.",
   },
   {
     number: "05",
     title: "Erect",
     description:
-      "Fabricated structures are transported and systematically erected at the project site.",
+      "Fabricated structures are transported and systematically erected at the project site by experienced teams.",
   },
   {
     number: "06",
     title: "Inspect & Handover",
     description:
-      "Final inspections are carried out before project completion and handover.",
+      "Final inspections ensure quality, safety, and reliable completion before project handover.",
   },
 ];
 

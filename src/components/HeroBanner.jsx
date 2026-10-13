@@ -63,16 +63,14 @@ export default function HeroBanner () {
           </h1>
 
           <h3>
+
             Pre-Engineered Buildings, Structural Steel Fabrication
             <br />
             & Industrial Construction Solutions
           </h3>
 
           <p>
-            SIBI Global Corporation delivers engineered steel structures
-            for factories, warehouses, industrial facilities and commercial
-            projects — from design and fabrication to site erection and
-            project completion.
+            Global Corporation is an experienced engineering services company delivering engineered steel structures for factories, warehouses, industrial facilities, and commercial projects - from design and fabrication to site erection and project completion.
           </p>
 
           <div className="hero-buttons">

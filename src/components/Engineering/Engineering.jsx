@@ -232,14 +232,15 @@ export default function Engineering() {
               <span>✦ Engineering</span>
             </div>
             <h1>
-              Engineering That Supports
+               Engineering Services for 
+              Pre-Engineered Buildings for 
+
               <br />
-              <span className="engineering-page-highlight">Better Structures</span>
+              <span className="engineering-page-highlight">Industrial & Commercial Projects</span>
             </h1>
             <p>
-              Good steel structures begin long before fabrication. Our engineering
-              approach focuses on developing structurally sound, practical and
-              project-specific solutions.
+Good steel structures begin long before fabrication. Our engineering expertise focuses on developing structurally sound, practical, and project-specific solutions that support safety, performance, and long-term value.
+
             </p>
 
             {/* <div className="engineering-page-hero-stats">
@@ -359,8 +360,8 @@ export default function Engineering() {
               Comprehensive <span className="engineering-page-highlight">Engineering</span>
             </h2>
             <p>
-              From structural design to erection planning, we provide complete
-              engineering services that ensure project success.
+             From structural design to erection planning, we provide complete engineering solutions that support efficient project execution, structural reliability, and long-term performance.
+
             </p>
           </motion.div>
 

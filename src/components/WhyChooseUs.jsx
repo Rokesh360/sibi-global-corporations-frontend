@@ -7,37 +7,37 @@ const features = [
     icon: "⚙",
     title: "Engineering-Led Approach",
     description:
-      "Every project begins with understanding the application, site conditions and structural requirements before developing the right solution.",
+      "Every project begins with strong engineering expertise, understanding application, site conditions, and structural requirements before developing the right solution.",
   },
   {
     icon: "♙",
     title: "Precision Fabrication",
     description:
-      "Controlled fabrication processes help maintain consistency, dimensional accuracy and structural quality.",
+      "Our Engineering Solutions The provider approach ensures controlled fabrication processes, dimensional accuracy, and consistent structural quality.",
   },
   {
     icon: "✓",
     title: "Project-Focused Execution",
     description:
-      "We plan fabrication and site activities around project schedules to support efficient execution.",
+      "As an experienced engineering services company, we plan fabrication and site activities around project schedules for efficient execution.",
   },
   {
     icon: "◉",
     title: "Quality Control",
     description:
-      "Quality checks are incorporated across material handling, fabrication, assembly and erection stages.",
+      "We maintain strict quality checks across material handling, fabrication, assembly, and erection stages to deliver reliable engineering solutions.",
   },
   {
     icon: "⚒",
     title: "Customised Solutions",
     description:
-      "We don't believe every industrial project needs the same structure. Our solutions are developed according to individual project requirements.",
+      "As an engineering solutions company, we develop customized solutions based on individual project requirements, applications, and structural needs.",
   },
   {
     icon: "⌁",
     title: "Single-Point Coordination",
     description:
-      "From engineering and fabrication to site erection, our integrated approach simplifies project coordination.",
+      "From engineering and fabrication to site erection, our integrated engineering services approach simplifies project coordination and execution.",
   },
 ];
 

@@ -113,9 +113,8 @@ export default function Manufacturing () {
               delay: 0.2,
             }}
           >
-            Our fabrication capabilities enable us to transform engineering
-            drawings and project requirements into accurately fabricated
-            structural components.
+            Our advanced fabrication capabilities combine engineering expertise with precision manufacturing to transform engineering drawings and project requirements into accurately fabricated structural components.
+
           </motion.p>
 
           <motion.div

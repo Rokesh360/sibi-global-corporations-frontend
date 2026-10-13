@@ -137,21 +137,18 @@ export default function AboutUs() {
           </motion.span>
 
           <motion.h2 variants={fadeUp}>
-            Engineering Steel Structures.
-            <span>Delivering Industrial Growth.</span>
+           Engineering Steel Structures engineering services, 
+            <span> company Delivering Industrial Growth.</span>
           </motion.h2>
 
           <motion.p variants={fadeUp}>
-            Sibi Global Corporation is an engineering and structural steel
-            solutions company focused on delivering reliable PEB structures,
-            fabrication, industrial sheds, mezzanine floors and related
-            construction solutions.
+           Sibi Global Corporation is an engineering services company specializing in reliable PEB structures, structural steel fabrication, industrial sheds, mezzanine floors, and related construction solutions.
+
           </motion.p>
 
           <motion.p variants={fadeUp}>
-            Our approach combines engineering expertise, controlled
-            fabrication and systematic site execution to create strong,
-            functional and efficient industrial infrastructure.
+           As an engineering solutions company, our approach combines engineering expertise, controlled fabrication, and systematic site execution to create strong, functional, and efficient industrial infrastructure.
+
           </motion.p>
 
           <motion.div

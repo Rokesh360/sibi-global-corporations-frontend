@@ -175,9 +175,9 @@ const SOLUTIONS = [
     id: 1,
     slug: "pre-engineered-buildings",
     number: "01",
-    title: "Pre-Engineered Buildings",
+    title: "Pre-Engineered Buildings for Industrial & Commercial Projects",
     description:
-      "Efficiently engineered steel building solutions designed for factories, warehouses, manufacturing facilities and industrial applications.",
+      "A steel building system that combines professional engineering services with factory-designed and manufactured structural components, allowing quick transportation and on-site assembly. ",
     image: PreEngineering,
     link: "Explore PEB Solutions",
     icon: "🏭",
@@ -226,9 +226,9 @@ const SOLUTIONS = [
     id: 2,
     slug: "structural-steel-fabrication",
     number: "02",
-    title: "Structural Steel Fabrication",
+    title: "Structural Steel Fabrication for Industrial & Commercial Projects",
     description:
-      "Precision-fabricated structural steel components manufactured according to project-specific engineering and fabrication requirements.",
+      "Our steel structure solutions include precision-fabricated structural components manufactured under controlled conditions and prepared for efficient transportation, assembly, and site installation.",
     image: SteelFabrication,
     link: "Explore Structural Fabrication",
     icon: "⚙",
@@ -275,9 +275,9 @@ const SOLUTIONS = [
     id: 3,
     slug: "industrial-shed-construction",
     number: "03",
-    title: "Industrial Shed Construction",
+    title: " Industrial Shed Construction for Manufacturing & Industrial Projects",
     description:
-      "Customised industrial shed solutions designed to provide practical, durable and efficient spaces for manufacturing, storage and operations.",
+      "We are an experienced industrial shed construction company delivering durable, customized steel sheds designed for manufacturing, storage, and industrial operations.",
     image: IndustrialShed,
     link: "Explore Industrial Sheds",
     icon: "🏗",
@@ -326,9 +326,9 @@ const SOLUTIONS = [
     id: 4,
     slug: "mezzanine-floors",
     number: "04",
-    title: "Mezzanine Floors",
+    title: "Mezzanine Floor Solutions for Industrial & Commercial Spaces",
     description:
-      "Steel mezzanine structures that help businesses maximise available vertical space and create additional usable floor areas within existing facilities.",
+      "A structural floor system designed to create additional usable space within existing industrial or commercial buildings, providing an efficient solution for storage, offices, and operational areas.",
     image: MezzanineFloors,
     link: "Explore Mezzanine Solutions",
     icon: "▥",
@@ -377,9 +377,9 @@ const SOLUTIONS = [
     id: 5,
     slug: "steel-erection",
     number: "05",
-    title: "Steel Erection",
+    title: "Steel Erection Services for Industrial & Commercial Projects ",
     description:
-      "Safe and systematic structural steel erection supported by experienced site teams and planned execution methodologies.",
+      "Professional steel erection services for safely lifting, positioning, and assembling structural steel components at the project site with precision and efficiency.",
     image: SteelErection,
     link: "Explore Steel Erection",
     icon: "🏗",
@@ -416,7 +416,7 @@ const SOLUTIONS = [
       "Experienced teams",
     ],
     whyFeatures: [
-      "Certified erection teams",
+      "Experienced erection teams",
       "Strict safety protocols",
       "Systematic execution planning",
       "Quality assurance at every step",
@@ -427,9 +427,9 @@ const SOLUTIONS = [
     id: 6,
     slug: "turnkey-industrial-solutions",
     number: "06",
-    title: "Turnkey Industrial Solutions",
+    title: "Turnkey Industrial Solutions for Complete Project Execution",
     description:
-      "Integrated project execution covering engineering, fabrication, transportation, erection and associated structural requirements.",
+      "A complete turnkey industrial solution that covers project planning, engineering, fabrication, construction, and execution under one coordinated approach.",
     image: TurnkeySolutions,
     link: "Discuss Your Project",
     icon: "✓",
@@ -832,20 +832,17 @@ export default function SolutionDetails() {
             <div className="difference-columns">
               <motion.div className="difference-intro" variants={fadeInLeft}>
                 <p>
-                  We go beyond standard construction by offering end-to-end
-                  support, modern engineering and a customer-first approach.
-                  Our team ensures every project is delivered with precision,
-                  quality and on-time execution.
+                  We go beyond standard construction by delivering steel engineering solutions with end-to-end support, modern engineering, and a customer-first approach. Our team ensures every project is delivered with precision, quality, and on-time execution.
                 </p>
               </motion.div>
 
               <div className="difference-points">
                 {[
-                  "Efficient communication all the way along.",
-                  "Target the schedules of business.",
-                  "Real site conditions as a guide to technology choice.",
-                  "Low-maintenance design structures.",
-                  "Future expansion opportunity without interruption.",
+                  "Efficient communication throughout the project",
+                  "Project schedules aligned with business requirements",
+                  "Real site conditions considered when selecting technologies",
+                  "Low-maintenance structural designs",
+                  "Future expansion opportunities with minimal disruption",
                 ].map((point, index) => (
                   <motion.div
                     className="check-row"
@@ -870,8 +867,7 @@ export default function SolutionDetails() {
             </div>
 
             <motion.p className="bottom-note" variants={fadeInUp}>
-              These aspects make the clients feel secure when and after
-              construction.
+              These strengths give our clients confidence throughout the construction process and long after project completion.
             </motion.p>
           </motion.div>
 
@@ -915,15 +911,15 @@ export default function SolutionDetails() {
             {[
               {
                 title: "Planning that matches your requirements",
-                text: "We start by understanding how you plan to use the building. Load requirements, clear span, height, ventilation, and movement flow are all taken into consideration.",
+                text: "We begin by understanding how you plan to use the building. Load requirements, clear span, height, ventilation, and movement flow are carefully considered to develop the right Steel Engineering Solutions for your project.",
               },
               {
                 title: "Design backed by engineering checks",
-                text: "All designs for the structures are based on proven engineering methodology. Load calculations are carefully performed to ensure the building performs in real-world conditions.",
+                text: "Our structural designs are developed using proven engineering methodologies. Detailed load calculations and engineering expertise help ensure the building performs safely and reliably under real-world conditions.",
               },
               {
                 title: "Factory fabrication you can rely on",
-                text: "Under the controlled conditions, the steel members are being fabricated. This ensures accuracy, consistency, and smooth installation at the site.",
+                text: "Under controlled factory conditions, structural steel members are accurately fabricated according to approved designs. Our engineering solutions provider approach ensures precision, consistency, and smooth installation at the project site.",
               },
             ].map((item, index) => (
               <motion.div

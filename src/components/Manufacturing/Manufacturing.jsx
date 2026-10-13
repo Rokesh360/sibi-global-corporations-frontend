@@ -442,14 +442,13 @@ export default function Manufacturing() {
               <span>✦ Manufacturing</span>
             </div>
             <h1>
-              Precision Fabrication
+              Advanced Steel Manufacturing 
               <br />
-              <span className="manufacturing-page-highlight">for Better Structures</span>
+              <span className="manufacturing-page-highlight">Solutions for Industrial Projects</span>
             </h1>
             <p>
-              From steel cutting to site installation, our manufacturing process
-              combines advanced technology with skilled craftsmanship to deliver
-              high-quality structural steel components.
+             From steel cutting to site installation, our Steel Manufacturing Solutions combine advanced technology, precise processes, and skilled craftsmanship to deliver high-quality structural steel components with consistency and reliability.
+
             </p>
           </motion.div>
 
@@ -554,8 +553,8 @@ export default function Manufacturing() {
           >
             <h2>End-to-End <span className="highlight">Fabrication Excellence</span></h2>
             <p>
-              We follow a systematic fabrication process with advanced equipment
-              and skilled professionals to deliver high-quality structural steel components.
+             We follow a systematic fabrication process using advanced equipment and skilled professionals to deliver reliable industrial manufacturing solutions and high-quality structural steel components with precision and consistency.
+
             </p>
           </motion.div>
 
@@ -648,14 +647,16 @@ export default function Manufacturing() {
           >
             <span className="manufacturing-section-label">WHY CHOOSE US</span>
             <h2>
+
+
               Precision.<br />
               Quality.<br />
              <span className="highlight">Performance.</span> 
             </h2>
             <div className="manufacturing-yellow-line"></div>
             <p>
-              We combine advanced technology, skilled workforce, and stringent
-              quality standards to deliver reliable steel solutions.
+             We combine advanced technology, skilled professionals, and stringent quality standards to deliver reliable steel fabrication services with precision, consistency and long-term performance.
+
             </p>
             <a href="#" className="manufacturing-learn-btn">
               LEARN MORE

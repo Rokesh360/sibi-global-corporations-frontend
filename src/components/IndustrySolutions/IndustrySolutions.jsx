@@ -298,14 +298,13 @@ export default function IndustrySolutions() {
                             <span>✦ Industry Solutions</span>
                         </div>
                         <h1>
-                            8 Industry Solutions.
+                             Engineering Solutions for 
                             <br />
-                            <span className="sibi-highlight">Engineered to Perform.</span>
+                            <span className="sibi-highlight">Diverse Industries.</span>
                         </h1>
                         <p>
-                            From heavy industrial plants to high-performance warehouses, our steel
-                            structures are designed to meet the unique demands of every sector
-                            with precision, reliability, and long-term value.
+                            From heavy industrial plants to high-performance warehouses, we deliver engineering solutions designed to meet the unique requirements of every sector with precision, reliability, and long-term value.
+
                         </p>
 
                         {/* <div className="sibi-hero-stats">

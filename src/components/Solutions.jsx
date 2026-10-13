@@ -15,7 +15,7 @@ const Solution = [
     slug: "pre-engineered-buildings",
     title: "Pre-Engineered Buildings",
     description:
-      "Efficiently engineered steel building solutions designed for factories, warehouses, manufacturing facilities and industrial applications.",
+      "Efficiently engineered steel building solutions from a trusted engineering solutions provider, designed for factories, warehouses, manufacturing facilities, and industrial applications",
     image: PreEngineering,
     link: "Explore PEB Solutions",
     icon: "🏭",
@@ -26,7 +26,7 @@ const Solution = [
     slug: "structural-steel-fabrication",
     title: "Structural Steel Fabrication",
     description:
-      "Precision-fabricated structural steel components manufactured according to project-specific engineering and fabrication requirements.",
+      "Precision-fabricated structural steel components backed by strong engineering expertise, built to meet project-specific requirements.",
     image: SteelFabrication,
     link: "Explore Structural Fabrication",
     icon: "⚙",
@@ -37,7 +37,7 @@ const Solution = [
     slug: "industrial-shed-construction",
     title: "Industrial Shed Construction",
     description:
-      "Customised industrial shed solutions designed to provide practical, durable and efficient spaces for manufacturing, storage and operations.",
+      "Customized industrial shed construction solutions designed for durable, efficient spaces for manufacturing, storage, and industrial operations.",
     image: IndustrialShed,
     link: "Explore Industrial Sheds",
     icon: "🏗",
@@ -48,7 +48,7 @@ const Solution = [
     slug: "mezzanine-floors",
     title: "Mezzanine Floors",
     description:
-      "Steel mezzanine structures that help businesses maximise available vertical space and create additional usable floor areas within existing facilities.",
+      "Steel mezzanine floor solutions designed to maximize vertical space and create additional usable areas within existing facilities.",
     image: MezzanineFloors,
     link: "Explore Mezzanine Solutions",
     icon: "▥",
@@ -59,7 +59,7 @@ const Solution = [
     slug: "steel-erection",
     title: "Steel Erection",
     description:
-      "Safe and systematic structural steel erection supported by experienced site teams and planned execution methodologies.",
+      "Safe and systematic structural steel erection delivered by experienced site teams with planned execution and quality standards.",
     image: SteelErection,
     link: "Explore Steel Erection",
     icon: "🏗",
@@ -70,7 +70,7 @@ const Solution = [
     slug: "turnkey-industrial-solutions",
     title: "Turnkey Industrial Solutions",
     description:
-      "Integrated project execution covering engineering, fabrication, transportation, erection and associated structural requirements.",
+      "End-to-end turnkey industrial solutions covering engineering, fabrication, transportation, erection, and structural requirements.",
     image: TurnkeySolutions,
     link: "Discuss Your Project",
     icon: "✓",
@@ -128,14 +128,13 @@ export default function Solutions() {
           </motion.div>
 
           <h2>
-            Complete Steel Solutions for
-            <strong> Industrial & Commercial </strong>
-            Projects
+          Engineering Solutions for 
+            <strong> Industrial & Commercial Projects </strong>
           </h2>
 
           <p>
-            From engineering to execution, we deliver high-quality steel
-            solutions that power your projects and drive your success.
+From design and fabrication to erection and project completion, we deliver comprehensive engineering solutions that support industries and build a stronger future.
+
           </p>
         </motion.div>
 
