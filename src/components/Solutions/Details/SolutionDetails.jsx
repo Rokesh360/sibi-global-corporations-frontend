@@ -20,6 +20,10 @@ import {
 } from "@ant-design/icons";
 import { useParams, Link } from "react-router-dom";
 import PreEngineering from "../../../../public/assets/img/solution/peb-building.jpg";
+import PreEngineeringBuilding from "../../../../public/assets/img/solution/pre-engineered-building.png";
+import SteelFrameBuilding from "../../../../public/assets/img/solution/steel-frame-building.png";
+import SteelPebImg from "../../../../public/assets/img/solution/steel-peb.jpg";
+import WorkerImg from "../../../../public/assets/img/solution/workers.png";
 import SteelFabrication from "../../../../public/assets/img/solution/steel-fabrication.jpg";
 import IndustrialShed from "../../../../public/assets/img/solution/industrial-shed.jpg";
 import SteelErection from "../../../../public/assets/img/solution/steel-erection.jpg";
@@ -178,7 +182,7 @@ const SOLUTIONS = [
     title: "Pre-Engineered Buildings for Industrial & Commercial Projects",
     description:
       "A steel building system that combines professional engineering services with factory-designed and manufactured structural components, allowing quick transportation and on-site assembly. ",
-    image: PreEngineering,
+    image: PreEngineeringBuilding,
     link: "Explore PEB Solutions",
     icon: "🏭",
     theme: "navy",
@@ -879,7 +883,7 @@ export default function SolutionDetails() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.img
-              src={solution.image}
+              src={SteelFrameBuilding}
               alt={solution.title}
               whileHover={{ scale: 1.04 }}
               transition={{ duration: 0.5 }}
@@ -946,7 +950,7 @@ export default function SolutionDetails() {
           >
             <div className="assembly-image">
               <motion.img
-                src={solution.image}
+                src={SteelPebImg}
                 alt={solution.title}
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.5 }}
@@ -1045,7 +1049,7 @@ export default function SolutionDetails() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.img
-              src={solution.image}
+              src={WorkerImg}
               alt={solution.title}
               whileHover={{ scale: 1.04 }}
               transition={{ duration: 0.5 }}

@@ -195,7 +195,7 @@ export default function AboutUs() {
                 {feature.icon}
               </motion.div>
 
-              <span>{feature.title}</span>
+              <h6 className="home_abut_span_tag">{feature.title}</h6>
             </motion.div>
           ))}
         </motion.div>

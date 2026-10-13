@@ -56,7 +56,7 @@ export default function HeroBanner () {
       <div className="hero-overlay"></div>
 
       <div className="hero-container">
-        <div className={`hero-content ${showContent ? "visible" : "hidden"}`}>
+        <div className={`hero-content home-banner-content ${showContent ? "visible" : "hidden"}`}>
           <h1>
             Engineered Steel.<br />
             <span>Built for Industry.</span>

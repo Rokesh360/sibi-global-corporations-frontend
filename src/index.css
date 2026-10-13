@@ -937,7 +937,13 @@ body {
   line-height: 28px;
   font-weight: 600;
 }
-
+.home_abut_span_tag
+{
+   color: #222;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 600;
+}
 /* RESPONSIVE */
 
 @media(max-width:1100px) {
@@ -1668,17 +1674,18 @@ header css */
 
 /* HEADING */
 
-.hero-content h1 {
+.home-banner-content h1 {
   
 
-  font-size: 50px;
-  line-height: 70px;
+  font-size: 50px !important;
+
+  line-height: 65px !important;
 
   font-weight: 700;
 
   color: #ffffff;
 
-  margin-bottom: 18px;
+  margin-bottom: 18px !important;
 }
 
 .hero-content h1 span {
@@ -15915,7 +15922,7 @@ padding: 30px 5% 30px !important;
   }
   .peb-description {
     font-size: 15px;
-  }
+  } 
   .peb-features li {
     font-size: 15px;
   }
